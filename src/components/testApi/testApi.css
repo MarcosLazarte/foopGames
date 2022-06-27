@@ -1,0 +1,52 @@
+/*
+    #71E5B8
+    #260B40
+    #8640A8
+*/
+
+
+body{
+    background-color: black;
+    color: white;
+}
+.set_icons{
+    background-color: grey;
+}
+.icon_salir{
+    color: antiquewhite;
+    font-size: 30px;
+    top: 0;
+    position: absolute;
+}
+.icon_opciones{
+    color: antiquewhite;
+    font-size: 40px;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+.set_perfil-logo{
+    background-color: antiquewhite;
+    color: rgb(5, 5, 5);
+    text-align: center;
+    font-size: 15vw;
+    text-transform: capitalize;
+    border-radius: 50%;
+    width: 35vw;
+    height: 35vw;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.set_perfil-apodo{
+    text-align: center;
+    margin-top: 5vw;
+}
+.test{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(transparent, #260B40 99%);
+}
