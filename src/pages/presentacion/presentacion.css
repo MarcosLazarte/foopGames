@@ -211,3 +211,211 @@
         font-style: italic;
     }
 }
+@media screen and (min-width: 768px){
+.presentacion_nav{
+        color: white;
+        position: fixed;
+    }
+    .nav_botonLogin{
+        position: fixed;
+        top: 4vw;
+        right: 3vw;
+        height: 10vw;
+        width: 10vw;
+        background-color: #F7AD19;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1;
+        font-size: 7vw;
+        color: white;
+    }
+    .nav_botonInicio{
+        position: fixed;
+        top: 16vw;
+        right: 3vw;
+        height: 10vw;
+        width: 10vw;
+        background-color: #F7AD19;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1;
+        font-size: 7vw;
+    }
+    .nav_botonTest{
+        position: fixed;
+        top: 28vw;
+        right: 3vw;
+        height: 10vw;
+        width: 10vw;
+        background-color: #F7AD19;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1;
+        font-size: 7vw;
+    }
+    .primeraPagina{
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(black 5%,#151737);
+        background-color: #151737;
+        overflow: hidden;
+    }
+    .cuernoDerecho-A{
+        bottom: 10vw;
+        right: 25vw;
+        position: absolute;
+        background-color: transparent;
+        width: 30vw;
+        height: 25vw;
+        border-radius: 50%;
+        box-shadow: 10vw 1.5vw 0px #D6CECA;
+    }/*
+    .cuernoDerecho-B{
+        width: 2vw;
+        height: 2vw;
+        background-color: transparent;
+        position: absolute;
+        bottom: 70vw;
+        right: 27vw;
+        border-top: solid 7vw #151737;
+        border-right: solid 7vw transparent;
+        border-bottom: solid 3vw transparent;
+        border-left: solid 7vw transparent;
+        transform: rotate(-80deg);
+    }*/
+    .cuernoIzquierdo-A{
+        bottom: 10vw;
+        left: 25vw;
+        position: absolute;
+        background-color: transparent;
+        width: 30vw;
+        height: 25vw;
+        border-radius: 50%;
+        box-shadow: -10vw 1.5vw 0px #D6CECA;
+    }/*
+    .cuernoIzquierdo-B{
+        width: 2vw;
+        height: 2vw;
+        background-color: transparent;
+        position: absolute;
+        bottom: 70vw;
+        left: 27vw;
+        border-top: solid 7vw #151737;
+        border-right: solid 7vw transparent;
+        border-bottom: solid 3vw transparent;
+        border-left: solid 7vw transparent;
+        transform: rotate(80deg);
+    }*/
+    .cabeza_arriba{
+        background-color: #D6CECA;
+        position: absolute;
+        width: 50vw;
+        height: 12vw;
+        border-radius: 50%;
+        bottom: 4vw;
+        left: 25vw;
+        transform: scale(0.85,1);
+    }
+    .cabeza_centro{
+        position: absolute;
+        bottom: 0px;
+        left: 25vw;
+        right: 4vw;
+        width: 50vw;
+        height: 13vw;
+        background-color: #D6CECA;
+        border-radius: 10vw 10vw 0 0;
+        /*border-radius: 100px 100px 0 0;*/
+    }
+    .ojo_izq{
+        position: absolute;
+        bottom: 0vw;
+        left: 33vw;
+        background-color: black;
+        width: 13vw;
+        height: 8vw;
+        border-radius: 50% 50% 0 0;
+    }
+    .ojo_sombrasIzq{
+        position: absolute;
+        width: 21vw;
+        height: 10vw;
+        background-color: transparent;
+        border-radius: 50%;
+        box-shadow: 0px -1vw 0 #151737;
+        bottom: 6vw;
+        left: 15vw;
+    }
+    .ojo_der{
+        position: absolute;
+        bottom: 0vw;
+        right: 33vw;
+        background-color: black;
+        width: 13vw;
+        height: 8vw;
+        border-radius: 50% 50% 0 0;
+    }
+    .ojo_sombrasDer{
+        position: absolute;
+        width: 21vw;
+        height: 10vw;
+        background-color: transparent;
+        border-radius: 50%;
+        box-shadow: 0px -1vw 0 #151737;
+        bottom: 6vw;
+        right: 15vw;
+    }
+    .primerPagina_titulo{
+        margin-left: 6vw;
+        margin-top: 5vh;
+        width: 100%;
+    }
+    .primeraPagina_titulo-letras{
+        font-size: 9vw;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+    .primeraPagina_titulo-letras1Fila{
+        margin-left: 21vw;
+        margin-right: 3vw;
+        color: #F7AD19;
+    }
+    .primeraPagina_titulo-letras2Fila{
+        margin-left: 6vw;
+        margin-right: 3vw;
+        color: #0B535C;
+    }
+    .primeraPagina_titulo-letras3Fila{
+        margin-left: 14vw;
+        margin-right: 3vw;
+        color: grey;
+    }
+    .primeraPagina_titulo-letras4Fila{
+        margin-left: -1vw;
+        margin-right: 3vw;
+        color: #F7AD19;
+    }
+    .segundaPagina{
+        background: linear-gradient(#151737,black);
+        width: 100%;
+        height: 100vh;
+    }
+    .terceraPagina{
+        width: 100%;
+        height: 100vh;
+    }
+    .primeraPagina_titulo-letraImp{
+        color: white;
+    }
+    .linea{
+        width: 120vw;
+        height: 0.75vw;
+        background-color: white;
+    }
+    .primeraPagina_subTitulo{
+        position: relative;
+        text-align: right;
+        right: 7vw;
+        font-style: italic;
+    }
+}
