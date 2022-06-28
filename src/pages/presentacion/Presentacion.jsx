@@ -40,25 +40,15 @@ const Presentacion = () => {
         </section>
 
         <section className='segundaPagina'>
-          <h1>Completismo y orden</h1>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consequatur mollitia at hic non, ab, recusandae dignissimos enim aliquam nesciunt nihil molestias ex quo veniam quod a autem. Enim, nobis.
-          </div>
-          <img src="" alt="imagen referencia 2" />
-          <div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem similique amet omnis illum nemo fuga itaque dolor? Expedita consequuntur sequi nesciunt accusantium, quaerat et fugit earum. Reiciendis culpa aut aperiam.
-          </div>
-          <img src="" alt="imagen referencia 2" />
-          <h1>Puntua tus juegos favoritos</h1>
-          <div>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed architecto pariatur alias, dolore quasi totam laboriosam repellendus libero culpa quia nulla dolorum officia, impedit explicabo minima vel ipsum recusandae doloribus?
-          </div>
-          <aside>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci enim aliquid ab velit explicabo placeat soluta, aliquam eum consequatur expedita sapiente facere deleniti, porro laudantium eveniet vitae accusamus ipsum! Voluptates.
-          </aside>
-          <aside>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, iusto consequatur. Vitae libero quam nisi quisquam veniam fuga alias nostrum qui eum laborum, possimus temporibus architecto odit officia? Totam, obcaecati.
-          </aside>
+          <h1>Guarda tus juegos terminados</h1>
+          <div>________________________</div>
+          <p>
+            ¿Empezo la temporada de ofertas y agregaste más juegos al backlog? Bueno, puede resultar un poco complicado tener en cuenta cuál terminaste,
+            dejaste o cúal estas 'tryhardeando' por tener todos los logros. En cualquier caso, foopGames es tu herramienta para saber cuál será tu
+            próximo movimiento.
+          </p>
+          <div> imagenes </div>
+          <h2>Caracteristicas</h2>
         </section>
 
         <section className='terceraPagina'>
