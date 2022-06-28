@@ -1,8 +1,10 @@
-# Getting Started with Create React App
+# React foopGames
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## View project
+
+https://marcoslazarte.github.io/foopGames/
 
 In the project directory, you can run:
 
