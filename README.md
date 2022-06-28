@@ -5,7 +5,7 @@
 https://marcoslazarte.github.io/foopGames/
 
 ## Notes
-Currently working on the mobile version, so, to see my progress set the screen on width: 478px (or less), or enter on a smartphone
+Currently working on the mobile version, so, to see my progress set the screen on width: 478px (or less), or enter with a smartphone
 
 ## Technologies
 HTML5, CSS3, ReactJS
