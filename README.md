@@ -14,8 +14,7 @@ HTML5, CSS3, ReactJS
 Fork/clone/download the repo and run npm install inside the folder.
 Run npm start.
 
-##Contact
-<br>
+## Contact
 https://www.linkedin.com/in/lazarte-aky/
 marcos.e.lazarte@gmail.com
 
