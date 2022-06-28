@@ -1,9 +1,51 @@
 
 
 @media screen and (max-width: 480px){
+    .presentacion_nav{
+        color: white;
+        position: fixed;
+    }
+    .nav_botonLogin{
+        position: fixed;
+        top: 4vw;
+        right: 3vw;
+        height: 10vw;
+        width: 10vw;
+        background-color: #F7AD19;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1;
+        font-size: 7vw;
+        color: white;
+    }
+    .nav_botonInicio{
+        position: fixed;
+        top: 16vw;
+        right: 3vw;
+        height: 10vw;
+        width: 10vw;
+        background-color: #F7AD19;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1;
+        font-size: 7vw;
+    }
+    .nav_botonTest{
+        position: fixed;
+        top: 28vw;
+        right: 3vw;
+        height: 10vw;
+        width: 10vw;
+        background-color: #F7AD19;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1;
+        font-size: 7vw;
+    }
     .primeraPagina{
         width: 100%;
         height: 100vh;
+        background: linear-gradient(black 5%,#151737);
         background-color: #151737;
         overflow: hidden;
     }
@@ -16,7 +58,7 @@
         height: 68vw;
         border-radius: 50%;
         box-shadow: 17vw 1.5vw 0px #D6CECA;
-    }
+    }/*
     .cuernoDerecho-B{
         width: 2vw;
         height: 2vw;
@@ -29,7 +71,7 @@
         border-bottom: solid 3vw transparent;
         border-left: solid 7vw transparent;
         transform: rotate(-80deg);
-    }
+    }*/
     .cuernoIzquierdo-A{
         bottom: 10vw;
         left: 15vw;
@@ -39,7 +81,7 @@
         height: 68vw;
         border-radius: 50%;
         box-shadow: -17vw 1.5vw 0px #D6CECA;
-    }
+    }/*
     .cuernoIzquierdo-B{
         width: 2vw;
         height: 2vw;
@@ -52,7 +94,7 @@
         border-bottom: solid 3vw transparent;
         border-left: solid 7vw transparent;
         transform: rotate(80deg);
-    }
+    }*/
     .cabeza_arriba{
         background-color: #D6CECA;
         position: absolute;
@@ -116,17 +158,17 @@
         right: 15vw;
     }
     .primerPagina_titulo{
-        margin-left: 5vw;
-        margin-top: 10vw;
+        margin-left: 6vw;
+        margin-top: 5vh;
         width: 100%;
     }
     .primeraPagina_titulo-letras{
-        font-size: 11vw;
+        font-size: 9vw;
         margin-left: 3vw;
         margin-right: 3vw;
     }
     .primeraPagina_titulo-letras1Fila{
-        margin-left: 20vw;
+        margin-left: 21vw;
         margin-right: 3vw;
         color: #F7AD19;
     }
@@ -141,17 +183,16 @@
         color: grey;
     }
     .primeraPagina_titulo-letras4Fila{
-        margin-left: -2vw;
+        margin-left: -1vw;
         margin-right: 3vw;
         color: #F7AD19;
     }
     .segundaPagina{
-        background-color: green;
+        background: linear-gradient(#151737,black);
         width: 100%;
         height: 100vh;
     }
     .terceraPagina{
-        background-color: red;
         width: 100%;
         height: 100vh;
     }
@@ -160,7 +201,7 @@
     }
     .linea{
         width: 120vw;
-        height: 1vw;
+        height: 0.75vw;
         background-color: white;
     }
     .primeraPagina_subTitulo{

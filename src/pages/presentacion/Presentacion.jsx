@@ -1,9 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './presentacion.css'
 
 const Presentacion = () => {
   return (
     <div className='testtt'>
+      <nav className='presentacion_nav'>
+        <Link to='/login'><button className='nav_botonLogin'>L</button></Link>
+        <Link to='/inicio'> <button className='nav_botonInicio'>I</button></Link>
+        <Link to='/test'><button className='nav_botonTest'>T</button></Link>
+      </nav>
         <section className='primeraPagina'>
           <div>
             <div className='primerPagina_titulo'>
@@ -34,9 +40,25 @@ const Presentacion = () => {
         </section>
 
         <section className='segundaPagina'>
-          <h1>Hola</h1>
-          <aside>noticias y publicidad</aside>
-          <div>Todo re bien</div>
+          <h1>Completismo y orden</h1>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consequatur mollitia at hic non, ab, recusandae dignissimos enim aliquam nesciunt nihil molestias ex quo veniam quod a autem. Enim, nobis.
+          </div>
+          <img src="" alt="imagen referencia 2" />
+          <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem similique amet omnis illum nemo fuga itaque dolor? Expedita consequuntur sequi nesciunt accusantium, quaerat et fugit earum. Reiciendis culpa aut aperiam.
+          </div>
+          <img src="" alt="imagen referencia 2" />
+          <h1>Puntua tus juegos favoritos</h1>
+          <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed architecto pariatur alias, dolore quasi totam laboriosam repellendus libero culpa quia nulla dolorum officia, impedit explicabo minima vel ipsum recusandae doloribus?
+          </div>
+          <aside>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci enim aliquid ab velit explicabo placeat soluta, aliquam eum consequatur expedita sapiente facere deleniti, porro laudantium eveniet vitae accusamus ipsum! Voluptates.
+          </aside>
+          <aside>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, iusto consequatur. Vitae libero quam nisi quisquam veniam fuga alias nostrum qui eum laborum, possimus temporibus architecto odit officia? Totam, obcaecati.
+          </aside>
         </section>
 
         <section className='terceraPagina'>
