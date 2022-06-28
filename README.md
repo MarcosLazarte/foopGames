@@ -12,7 +12,7 @@ HTML5, CSS3, ReactJS
 
 ## Installation
 - Fork/clone/download the repo and run: ***npm install*** inside the folder.
-- Then, ***run npm start***.
+- Then, run ***npm start***.
 
 ##Contact
 <br>
