@@ -15,6 +15,7 @@ Fork/clone/download the repo and run npm install inside the folder.
 Run npm start.
 
 ##Contact
+<br>
 https://www.linkedin.com/in/lazarte-aky/
 marcos.e.lazarte@gmail.com
 
