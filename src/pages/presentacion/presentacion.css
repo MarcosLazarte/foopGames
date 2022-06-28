@@ -1,3 +1,5 @@
+
+
 @media screen and (max-width: 480px){
     .primeraPagina{
         width: 100%;
@@ -6,72 +8,71 @@
         overflow: hidden;
     }
     .cuernoDerecho-A{
-        bottom: 70px;
+        bottom: 10vw;
         right: 15vw;
         position: absolute;
         background-color: transparent;
         width: 70vw;
-        height: 65vw;
+        height: 68vw;
         border-radius: 50%;
-        box-shadow: 17vw 1vw 0px #D6CECA;
+        box-shadow: 17vw 1.5vw 0px #D6CECA;
     }
     .cuernoDerecho-B{
-        width: 5vw;
-        height: 5vw;
+        width: 2vw;
+        height: 2vw;
         background-color: transparent;
         position: absolute;
-        bottom: 65vw;
-        right: 20vw;
-        border-top: solid 110px blue;
-        border-right: solid 100px transparent;
-        border-bottom: solid 0px transparent;
-        border-left: solid 100px transparent;
-        border-radius: 50%;
+        bottom: 70vw;
+        right: 27vw;
+        border-top: solid 7vw #151737;
+        border-right: solid 7vw transparent;
+        border-bottom: solid 3vw transparent;
+        border-left: solid 7vw transparent;
         transform: rotate(-80deg);
     }
     .cuernoIzquierdo-A{
-        bottom: 70px;
-        left: 50px;
+        bottom: 10vw;
+        left: 15vw;
         position: absolute;
         background-color: transparent;
-        width: 350px;
-        height: 300px;
+        width: 70vw;
+        height: 68vw;
         border-radius: 50%;
-        box-shadow: -70px 5px 0px #D6CECA;
+        box-shadow: -17vw 1.5vw 0px #D6CECA;
     }
     .cuernoIzquierdo-B{
-        width: 50px;
-        height: 50px;
+        width: 2vw;
+        height: 2vw;
         background-color: transparent;
         position: absolute;
-        bottom: 310px;
-        left: 85px;
-        border-top: solid 110px #151737;
-        border-right: solid 100px transparent;
-        border-bottom: solid 0px transparent;
-        border-left: solid 100px transparent;
-        border-radius: 50%;
+        bottom: 70vw;
+        left: 27vw;
+        border-top: solid 7vw #151737;
+        border-right: solid 7vw transparent;
+        border-bottom: solid 3vw transparent;
+        border-left: solid 7vw transparent;
         transform: rotate(80deg);
     }
     .cabeza_arriba{
         background-color: #D6CECA;
         position: absolute;
         width: 90vw;
-        height: 100px;
+        height: 22vw;
         border-radius: 50%;
         bottom: 15vw;
-        left: 5vw;
+        left: 3vw;
         transform: scale(0.85,1);
     }
     .cabeza_centro{
-        position: relative;
-        bottom: -110px;
-        margin-left: 4vw;
-        margin-right: 4vw;
+        position: absolute;
+        bottom: 0px;
+        left: 5vw;
+        right: 4vw;
         width: 90vw;
-        height: 150px;
+        height: 33vw;
         background-color: #D6CECA;
-        border-radius: 100px 100px 0 0;
+        border-radius: 25vw 25vw 0 0;
+        /*border-radius: 100px 100px 0 0;*/
     }
     .ojos{
         overflow: hidden;
@@ -79,23 +80,45 @@
     .ojo_izq{
         position: absolute;
         bottom: 0vw;
-        left: 10vw;
+        left: 13vw;
         background-color: black;
-        width: 30vw;
-        height: 15vw;
+        width: 25vw;
+        height: 18vw;
         border-radius: 50% 50% 0 0;
+    }
+    .ojo_sombrasIzq{
+        position: absolute;
+        width: 21vw;
+        height: 10vw;
+        background-color: transparent;
+        border-radius: 50%;
+        box-shadow: 0px -1vw 0 #151737;
+        bottom: 6vw;
+        left: 15vw;
     }
     .ojo_der{
         position: absolute;
-        bottom: -65px;
-        right: 65px;
+        bottom: 0vw;
+        right: 13vw;
         background-color: black;
-        width: 120px;
-        height: 150px;
+        width: 25vw;
+        height: 18vw;
+        border-radius: 50% 50% 0 0;
+    }
+    .ojo_sombrasDer{
+        position: absolute;
+        width: 21vw;
+        height: 10vw;
+        background-color: transparent;
         border-radius: 50%;
+        box-shadow: 0px -1vw 0 #151737;
+        bottom: 6vw;
+        right: 15vw;
     }
     .primerPagina_titulo{
-        width: 100vw;
+        margin-left: 5vw;
+        margin-top: 30vw;
+        width: 100%;
     }
     .primeraPagina_titulo-letras{
         font-size: 11vw;
@@ -105,32 +128,45 @@
     .primeraPagina_titulo-letras1Fila{
         margin-left: 20vw;
         margin-right: 3vw;
-        z-index: 2;
+        color: #F7AD19;
     }
     .primeraPagina_titulo-letras2Fila{
         margin-left: 6vw;
         margin-right: 3vw;
+        color: #0B535C;
     }
     .primeraPagina_titulo-letras3Fila{
         margin-left: 14vw;
         margin-right: 3vw;
+        color: grey;
     }
     .primeraPagina_titulo-letras4Fila{
         margin-left: -2vw;
         margin-right: 3vw;
+        color: #F7AD19;
     }
     .segundaPagina{
         background-color: green;
-        width: 100vw;
+        width: 100%;
         height: 100vh;
     }
     .terceraPagina{
         background-color: red;
-        width: 100vw;
+        width: 100%;
         height: 100vh;
     }
-    .testtt{
-        background-color: #151737;
-        width: 100vw;
+    .primeraPagina_titulo-letraImp{
+        color: white;
+    }
+    .linea{
+        width: 120vw;
+        height: 1vw;
+        background-color: white;
+    }
+    .primeraPagina_subTitulo{
+        position: relative;
+        text-align: right;
+        right: 7vw;
+        font-style: italic;
     }
 }
