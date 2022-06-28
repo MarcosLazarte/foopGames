@@ -8,7 +8,7 @@ https://marcoslazarte.github.io/foopGames/
 Currently working on the mobile version, so, to see my progress set the screen on width: 478px (or less), or enter with a smartphone
 
 ## Technologies
-HTML5, CSS3, ReactJS
+HTML5, CSS3, ReactJS, Fireauth, Firebase
 
 ## Installation
 - Fork/clone/download the repo and run: ***npm install*** inside the folder.
