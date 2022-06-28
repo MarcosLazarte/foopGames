@@ -49,6 +49,7 @@ const Presentacion = () => {
           </p>
           <div> imagenes </div>
           <h2>Caracteristicas</h2>
+          <p>Inicia sesión y ten acceso a la biblioteca de juegos más grande provista por la API 'RAWG', donde </p>
         </section>
 
         <section className='terceraPagina'>
@@ -60,7 +61,11 @@ const Presentacion = () => {
             <div>green</div>
           </div>
         </section>
-        
+        <section>
+          <footer>
+
+          </footer>
+        </section>
     </div>
   )
 }
