@@ -11,8 +11,8 @@ Currently working on the mobile version, so, to see my progress set the screen o
 HTML5, CSS3, ReactJS
 
 ## Installation
-- Fork/clone/download the repo and run: **npm install** inside the folder.
-- Then, **run npm start**.
+- Fork/clone/download the repo and run: ***npm install*** inside the folder.
+- Then, ***run npm start***.
 
 ##Contact
 <br>
