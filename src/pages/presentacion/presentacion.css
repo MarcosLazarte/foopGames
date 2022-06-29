@@ -108,9 +108,9 @@
     .cabeza_centro{
         position: absolute;
         bottom: 0px;
-        left: 5vw;
-        right: 4vw;
-        width: 90vw;
+        left: 5%;
+        right: 5%;
+        width: 90%;
         height: 33vw;
         background-color: #D6CECA;
         border-radius: 25vw 25vw 0 0;
@@ -209,6 +209,84 @@
         text-align: right;
         right: 7vw;
         font-style: italic;
+    }
+    .segundaPagina_lineaHollow{
+        background-color: #0B535C;
+        height: 10px;
+        width: 93%;
+        margin: 0 auto 0 auto;
+    }
+    .segundaPagina_titulo{
+        padding-top: 15vw;
+        font-size: 10vw;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .segundaPagina_setLineas{
+        display: flex;
+        margin-top: 5vw;
+        margin-right: auto;
+        margin-left: auto;
+        justify-content: center;
+    }
+    .segundaPagina_linea{
+        height: 3vw;
+        width: 10%;
+        margin-right: 1vw;
+        margin-left: 1vw;
+        background-color: #0B535C;
+        transform: skew(25deg, 0deg);
+    }
+    .segundaPagina_parrafo{
+        margin-top: 5vw;
+        text-align: center;
+        line-height: calc(17px + 1vw);
+        margin-right: 3vw;
+        margin-left: 3vw;
+    }
+    .segundaPagina_imagenesSet{
+        width: 100%;
+    }
+    .segundaPagina_boton{
+        width: 40px;
+        height: 40px;
+    }
+    .setImagenes{
+        height: auto;
+        width: 100%;
+        background-color: #F7AD19;
+        display: flex;
+    }
+    .imagenesSet_1{
+        height: auto;
+        width: 100%;
+        opacity: 1;
+    }
+    .imagenesSet_2{
+        width: 100%;
+        opacity: 1;
+    }
+    .imagenesSet_3{
+        width: 100%;
+        opacity: 1;
+    }
+    @keyframes move1{
+        from{}
+        to{transform: translateX(-100%);}
+    }
+    @mediaframes move2{
+        from{}
+        to{transform: translateX(100%)}
+    }
+    .animateImg1{
+        animation-name: move1;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .animateImg2{
+        animation-name: move2;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
     }
 }
 @media screen and (min-width: 768px){

@@ -1,8 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './presentacion.css'
 
 const Presentacion = () => {
+  const [isSending, setIsSending] = useState(false);
+
+    let id_imagenesSet_1 = document.getElementById('id_imagenesSet_1');
+    let id_imagenesSet_2 = document.getElementById('id_imagenesSet_2');
+    
+    const aky = () => {
+      setIsSending(true)
+    }
+    const doSome = () => {
+      id_imagenesSet_1.classList.toggle('animateImg1');
+      /*id_imagenesSet_2.classList.toggle('animateImg2');*/
+    }
+    useEffect( () => {
+      if(isSending){
+        doSome();
+      }
+    }, [isSending])
+
   return (
     <div className='testtt'>
       <nav className='presentacion_nav'>
@@ -40,26 +58,35 @@ const Presentacion = () => {
         </section>
 
         <section className='segundaPagina'>
-          <h1>Guarda tus juegos terminados</h1>
-          <div>________________________</div>
-          <p>
+          <div className='segundaPagina_lineaHollow'></div>
+          <h1 className='segundaPagina_titulo'>Guarda tus juegos terminados</h1>
+          <div className='segundaPagina_setLineas'>
+            <div className='segundaPagina_linea'></div>
+            <div className='segundaPagina_linea'></div>
+            <div className='segundaPagina_linea'></div>
+          </div>
+          <p className='segundaPagina_parrafo'>
             ¿Empezo la temporada de ofertas y agregaste más juegos al backlog? Bueno, puede resultar un poco complicado tener en cuenta cuál terminaste,
             dejaste o cúal estas 'tryhardeando' por tener todos los logros. En cualquier caso, foopGames es tu herramienta para saber cuál será tu
             próximo movimiento.
           </p>
-          <div> imagenes </div>
+          <div className='segundaPagina_imagenesSet'>
+            <button id='testoBoton' className='segundaPagina_boton' onClick={aky}>‹❮</button>
+            <button className='segundaPagina_boton'>❯›</button>
+            <div className='setImagenes'>
+              <img id='id_imagenesSet_1' className='imagenesSet_1' src="https://compass-ssl.xbox.com/assets/af/29/af290be8-5d42-4bb8-a699-cf4dac686837.jpg?n=995201_Gallery_01_1350x759_01.jpg" alt="" />
+              <img id='id_imagenesSet-2' className='imagenesSet_2' src="https://compass-ssl.xbox.com/assets/8a/e1/8ae174c0-a3e0-428c-8c4d-af83b0e32796.jpg?n=995201_Gallery_02_1350x759_01.jpg" alt="" />   
+              <img id='id_imagenesSet-3' className='imagenesSet_3' src="https://compass-ssl.xbox.com/assets/e4/ba/e4ba633d-647c-4e8b-a11b-18b15606144b.jpg?n=995201_Gallery_04_1350x759_01.jpg" alt="" />
+            </div>
+          </div>
           <h2>Caracteristicas</h2>
-          <p>Inicia sesión y ten acceso a la biblioteca de juegos más grande provista por la API 'RAWG', donde </p>
+          <p>
+            Inicia sesión y ten acceso a la biblioteca de juegos más grande provista por la RAWG, la base de datos
+            más grande
+          </p>
         </section>
 
         <section className='terceraPagina'>
-          <h1>Seccion 2022</h1>
-          <aside>noticias y publicidad</aside>
-          <div>
-            <div>blue</div>
-            <div>red</div>
-            <div>green</div>
-          </div>
         </section>
         <section>
           <footer>
