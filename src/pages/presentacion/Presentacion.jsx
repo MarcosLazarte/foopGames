@@ -54,11 +54,12 @@ const Presentacion = () => {
                 <div className='ojo_der'></div>
                 <div className='ojo_sombrasDer'></div>
               </div>
+              <div className='segundaPagina_lineaHollow'></div>
+
           </div>
         </section>
 
         <section className='segundaPagina'>
-          <div className='segundaPagina_lineaHollow'></div>
           <h1 className='segundaPagina_titulo'>Guarda tus juegos terminados</h1>
           <div className='segundaPagina_setLineas'>
             <div className='segundaPagina_linea'></div>

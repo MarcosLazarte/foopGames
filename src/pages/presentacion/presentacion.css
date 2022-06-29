@@ -215,6 +215,10 @@
         height: 10px;
         width: 93%;
         margin: 0 auto 0 auto;
+        left: 0;
+        right: 0;
+        position: absolute;
+        bottom: -10px;
     }
     .segundaPagina_titulo{
         padding-top: 15vw;
