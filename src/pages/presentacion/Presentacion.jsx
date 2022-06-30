@@ -143,11 +143,7 @@ const Presentacion = () => {
 
   return (
     <div className='testtt'>
-      <nav className='presentacion_nav'>
-        <Link to='/login'><button className='nav_botonLogin'>L</button></Link>
-        <Link to='/inicio'> <button className='nav_botonInicio'>I</button></Link>
-        <Link to='/test'><button className='nav_botonTest'>T</button></Link>
-      </nav>
+
         <section className='primeraPagina'>
           <div>
             <div className='primerPagina_titulo'>
@@ -196,16 +192,16 @@ const Presentacion = () => {
               <img id='id_imagenesSet_1' className={movement1()} src="https://compass-ssl.xbox.com/assets/af/29/af290be8-5d42-4bb8-a699-cf4dac686837.jpg?n=995201_Gallery_01_1350x759_01.jpg" alt="" />
               <img id='id_imagenesSet-2' className={movement2()} src="https://compass-ssl.xbox.com/assets/8a/e1/8ae174c0-a3e0-428c-8c4d-af83b0e32796.jpg?n=995201_Gallery_02_1350x759_01.jpg" alt="" />   
               <img id='id_imagenesSet-3' className={movement3()} src="https://compass-ssl.xbox.com/assets/e4/ba/e4ba633d-647c-4e8b-a11b-18b15606144b.jpg?n=995201_Gallery_04_1350x759_01.jpg" alt="" />
-              <button className='segundaPagina_botonIzq' 
+              <div className='segundaPagina_botonIzq' 
                 onClick={ () => {
                   setSlide(slide - 1);
                   setDireccion(false)
-                  }}>‹❮</button>
-              <button className='segundaPagina_botonDer'
+                  }}>‹❮</div>
+              <div className='segundaPagina_botonDer'
                 onClick={ () => {
                   setSlide(slide + 1);
                   setDireccion(true)
-                  }}>❯›</button>
+                  }}>❯›</div>
             </div>
           </div>
           <h2>Caracteristicas</h2>
@@ -222,6 +218,11 @@ const Presentacion = () => {
 
           </footer>
         </section>
+        <nav className='presentacion_nav'>
+        <Link to='/login'><button className='nav_botonLogin'>L</button></Link>
+        <Link to='/inicio'> <button className='nav_botonInicio'>I</button></Link>
+        <Link to='/test'><button className='nav_botonTest'>T</button></Link>
+      </nav>
     </div>
   )
 }
