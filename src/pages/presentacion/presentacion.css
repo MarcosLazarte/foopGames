@@ -251,9 +251,28 @@
     .segundaPagina_imagenesSet{
         width: 100%;
     }
-    .segundaPagina_boton{
-        width: 40px;
-        height: 40px;
+    .setImagenes{
+        position: relative;
+    }
+    .segundaPagina_botonIzq{
+        width: 10vw;
+        height: 10vw;
+        border-radius: 50%;
+        opacity: 0.5;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 40%;
+    }
+    .segundaPagina_botonDer{
+        width: 10vw;
+        height: 10vw;
+        border-radius: 50%;
+        opacity: 0.5;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 40%;
     }
     .setImagenes{
         height: auto;
@@ -279,17 +298,94 @@
         from{}
         to{transform: translateX(-100%);}
     }
-    @mediaframes move2{
-        from{}
-        to{transform: translateX(100%)}
+    @keyframes move2{
+        from{transform: translateX(-100%);}
+        to{transform: translateX(-200%)}
+    }
+    @keyframes move3{
+        from{transform: translateX(-200%);}
+        to{transform: translateX(-300%)}
+    }
+    @keyframes move4{
+        from{transform: translateX(100%)}
+        to{transform: translateX(0%)}
     }
     .animateImg1{
+        width: 100%;
         animation-name: move1;
         animation-duration: 1s;
         animation-fill-mode: forwards;
     }
     .animateImg2{
+        width: 100%;
         animation-name: move2;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .animateImg3{
+        width: 100%;
+        animation-name: move3;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .animateImg4{
+        width: 100%;
+        animation-name: move4;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .imagentest1{
+        width: 100%;
+        transform: translateX(100%);
+    }
+    .imagentest2{
+        width: 100%;
+        transform: translateX(-200%);
+    }
+    .imagentest3{
+        transform: translateX(-200%);
+    }
+
+
+    @keyframes move1_Der{
+        from{transform: translateX(-100%);}
+        to{transform: translateX(0%);}
+    }
+    @keyframes move2_Der{
+        from{transform: translateX(-200%);}
+        to{transform: translateX(-100%);}
+    }
+    @keyframes move3_Der{
+        from{transform: translateX(0%);}
+        to{transform: translateX(100%);}
+    }
+    @keyframes move4_Der{
+        from{transform: translateX(-300%);}
+        to{transform: translateX(-200%);}
+    }
+    .animateImg1_Der{
+        width: 100%;
+        animation-name: move1_Der;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .animateImg2_Der{
+        width: 100%;
+        animation-name: move2_Der;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .animateImg3_Der{
+        width: 100%;
+        animation-name: move3_Der;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .animateImg4_Der{
+        transform: translateX(-400%);
+        width: 100%;
+        animation-name: move4_Der;
         animation-duration: 1s;
         animation-fill-mode: forwards;
     }

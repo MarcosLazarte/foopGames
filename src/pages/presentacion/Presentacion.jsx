@@ -3,23 +3,143 @@ import { Link } from 'react-router-dom'
 import './presentacion.css'
 
 const Presentacion = () => {
-  const [isSending, setIsSending] = useState(false);
+  const [slide, setSlide] = useState(0);
+  const [direccion, setDireccion] = useState(true);
 
-    let id_imagenesSet_1 = document.getElementById('id_imagenesSet_1');
-    let id_imagenesSet_2 = document.getElementById('id_imagenesSet_2');
-    
-    const aky = () => {
-      setIsSending(true)
-    }
-    const doSome = () => {
-      id_imagenesSet_1.classList.toggle('animateImg1');
-      /*id_imagenesSet_2.classList.toggle('animateImg2');*/
-    }
-    useEffect( () => {
-      if(isSending){
-        doSome();
+   const movement1 = () => {
+    if(direccion){
+      switch(slide){
+        case 0:
+          return 'imagenesSet_1'
+          break;
+        case 1:
+          return 'animateImg1'
+          break;
+        case 2:
+          return 'imagentest1'
+          break;
+        case 3:
+          return 'animateImg4'
+          break;
+        case 4:
+          setSlide(1);
+          return 'animateImg4'
+          break;
       }
-    }, [isSending])
+    } else {
+      switch(slide){
+        case -1:
+          setSlide(2);
+          break;
+        case 0:
+          return 'animateImg1_Der'
+          break;
+        case 1:
+          return 'animateImg1'
+          break;
+        case 2:
+          return 'animateImg3_Der'
+          break;
+        case 3:
+          return 'animateImg4'
+          break;
+        case 4:
+          setSlide(1);
+          return 'animateImg4'
+          break;
+      }
+    }
+   }
+   const movement2 = () => {
+    if(direccion){
+      switch(slide){
+        case 0:
+          return 'imagenesSet_1'
+          break;
+        case 1:
+          return 'animateImg1'
+          break;
+        case 2:
+          return 'animateImg2'
+          break;
+        case 3:
+          return 'imagenesSet_1'
+          break;
+        case 4:
+          setSlide(1);
+          return 'animateImg4'
+          break;
+      }
+    } else {
+      switch(slide){
+        case -1:
+          setSlide(2);
+          break;
+        case 0:
+          return 'animateImg1_Der'
+          break;
+        case 1:
+          return 'animateImg2_Der'
+          break;
+        case 2:
+          return 'imagentest2'
+          break;
+        case 3:
+          return 'imagenesSet_1'
+          break;
+        case 4:
+          setSlide(1);
+          return 'animateImg4'
+          break;
+      }
+    }
+    
+   }
+   const movement3 = () => {
+    if (direccion){
+      switch(slide){
+        case 0:
+          return 'imagenesSet_1'
+          break;
+        case 1:
+          return 'imagenesSet_1'
+          break;
+        case 2:
+          return 'animateImg2'
+          break;
+        case 3:
+          return 'animateImg3'
+          break;
+        case 4:
+          setSlide(1);
+          return 'animateImg4'
+          break;
+      }
+    } else {
+      switch(slide){
+        case -1:
+          setSlide(2);
+          break;
+        case 0:
+          return 'imagenesSet_1'
+          break;
+        case 1:
+          return 'animateImg2_Der'
+          break;
+        case 2:
+          return 'animateImg4_Der'
+          break;
+        case 3:
+          return 'animateImg3'
+          break;
+        case 4:
+          setSlide(1);
+          return 'animateImg4'
+          break;
+      }
+    }
+   }
+   
 
   return (
     <div className='testtt'>
@@ -72,12 +192,20 @@ const Presentacion = () => {
             próximo movimiento.
           </p>
           <div className='segundaPagina_imagenesSet'>
-            <button id='testoBoton' className='segundaPagina_boton' onClick={aky}>‹❮</button>
-            <button className='segundaPagina_boton'>❯›</button>
             <div className='setImagenes'>
-              <img id='id_imagenesSet_1' className='imagenesSet_1' src="https://compass-ssl.xbox.com/assets/af/29/af290be8-5d42-4bb8-a699-cf4dac686837.jpg?n=995201_Gallery_01_1350x759_01.jpg" alt="" />
-              <img id='id_imagenesSet-2' className='imagenesSet_2' src="https://compass-ssl.xbox.com/assets/8a/e1/8ae174c0-a3e0-428c-8c4d-af83b0e32796.jpg?n=995201_Gallery_02_1350x759_01.jpg" alt="" />   
-              <img id='id_imagenesSet-3' className='imagenesSet_3' src="https://compass-ssl.xbox.com/assets/e4/ba/e4ba633d-647c-4e8b-a11b-18b15606144b.jpg?n=995201_Gallery_04_1350x759_01.jpg" alt="" />
+              <img id='id_imagenesSet_1' className={movement1()} src="https://compass-ssl.xbox.com/assets/af/29/af290be8-5d42-4bb8-a699-cf4dac686837.jpg?n=995201_Gallery_01_1350x759_01.jpg" alt="" />
+              <img id='id_imagenesSet-2' className={movement2()} src="https://compass-ssl.xbox.com/assets/8a/e1/8ae174c0-a3e0-428c-8c4d-af83b0e32796.jpg?n=995201_Gallery_02_1350x759_01.jpg" alt="" />   
+              <img id='id_imagenesSet-3' className={movement3()} src="https://compass-ssl.xbox.com/assets/e4/ba/e4ba633d-647c-4e8b-a11b-18b15606144b.jpg?n=995201_Gallery_04_1350x759_01.jpg" alt="" />
+              <button className='segundaPagina_botonIzq' 
+                onClick={ () => {
+                  setSlide(slide - 1);
+                  setDireccion(false)
+                  }}>‹❮</button>
+              <button className='segundaPagina_botonDer'
+                onClick={ () => {
+                  setSlide(slide + 1);
+                  setDireccion(true)
+                  }}>❯›</button>
             </div>
           </div>
           <h2>Caracteristicas</h2>
