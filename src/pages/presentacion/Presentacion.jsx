@@ -204,11 +204,33 @@ const Presentacion = () => {
                   }}>❯›</div>
             </div>
           </div>
-          <h2>Caracteristicas</h2>
-          <p>
-            Inicia sesión y ten acceso a la biblioteca de juegos más grande provista por la RAWG, la base de datos
-            más grande
+          <h2 className='segundaPagina_titulo'>Caracteristicas</h2>
+          <div className='segundaPagina_setLineas'>
+            <div className='segundaPagina_linea'></div>
+            <div className='segundaPagina_linea'></div>
+            <div className='segundaPagina_linea'></div>
+          </div>
+          <p className='segundaPagina_parrafo'>
+            Inicia sesión y ten acceso a la APi RAWG, la base de datos
+            y servicio de busqueda de juegos más grande del mundo. 
+            foopGAmes combinado con RAWG te ofrecera comodidad y accesibilidad que te
+            permitira concentrarte solo en lo que importa: JUGAR 
           </p>
+
+          <div className='segundaPagina_columnas'>
+            <div className='segundaPagina_columnasParrafo'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, sed velit? At dolorem architecto maiores laboriosam, mollitia odio perspiciatis totam consectetur enim eaque iste quas, quae quos dolores fugit nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quae a ab asperiores mollitia dolor eligendi sint modi enim distinctio minus, voluptates maxime commodi, voluptate, hic pariatur odio similique reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores veniam consequatur, a dignissimos ut culpa qui. Fugit praesentium iste deleniti deserunt cumque alias quasi ex, et temporibus rerum aspernatur aut. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, ipsum iure? Iste laboriosam nulla architecto atque quasi perspiciatis est facere accusantium, accusamus obcaecati. Cumque temporibus eaque doloribus minima, iusto architecto.
+            </div>
+            <div className='segundaPagina_nailSet'>
+              <div className='segundaPagina_mango'></div>
+              <div className='segundaPagina_mango-sombra'></div>
+              <div className='segundaPagina_filo'></div>
+              <div className='segundaPagina_filo-sombra'></div>
+            </div>
+            <div className='segundaPagina_columnasParrafo'>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis architecto officia aperiam fugiat, laborum cupiditate iusto eos, exercitationem deserunt sequi cumque, voluptas nesciunt blanditiis natus provident commodi quibusdam aliquam? Ea. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi corrupti, voluptas quas error harum expedita in? Magnam excepturi, autem omnis, vero architecto quibusdam hic unde officia ipsum quisquam consequuntur quia!
+            </div>
+          </div>
         </section>
 
         <section className='terceraPagina'>

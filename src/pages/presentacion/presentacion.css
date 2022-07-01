@@ -252,6 +252,7 @@
         width: 100%;
     }
     .setImagenes{
+        margin-top: 5vw;
         position: relative;
     }
     .segundaPagina_botonIzq{
@@ -280,6 +281,98 @@
         background-color: #F7AD19;
         display: flex;
         overflow: hidden;
+    }
+    .segundaPagina_columnas{
+        margin-top: 5vw;
+        display: grid;
+        grid-template-columns: 42% 16% 42%;
+        grid-template-rows: auto;
+    }
+    .segundaPagina_columnasParrafo{
+        margin-right: 3vw;
+        margin-left: 3vw;
+        text-align: center;
+        font-size: 4vw;
+    }
+    .segundaPagina_nailSet{
+        position: relative;
+    }
+    .segundaPagina_mango{
+        background-color: #B5ABB5;
+        width: 23%;
+        height: calc(20vw + 300px);
+        margin-right: auto;
+        margin-left: auto;
+        right: 0;
+        left: 0;
+    }
+    .segundaPagina_mango-sombra{
+        width: 8%;
+        height: calc(3vw + 75px);
+        position: absolute;
+        top: calc(1px + 1vw);
+        left: 0;
+        right: 1vw;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: #55556D;
+        filter: blur(2px);
+        z-index: 2;
+    }
+    .segundaPagina_mangoSombra{
+        position: absolute;
+        right: 0;
+        left: 0;
+        background-color: black;
+        width: 5vw;
+        height: calc(20vw + 300px);
+        margin-right: auto;
+        margin-left: auto;
+        z-index: 1;
+        top: 0;
+    }
+    .segundaPagina_filoSombra{
+        width: 100%;
+        height: 0;
+        position: absolute;
+        right: 0vw;
+        left: 0;
+        margin-right: auto;
+        margin-left: auto;
+        top: calc(3vw + 80px);
+        border-right: 10vw solid transparent;
+        border-left: 10vw solid transparent;
+        border-top:  calc(25vw + 300px) solid red;
+    }
+    .segundaPagina_filo{
+        width: 100%;
+        height: 0;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin-right: auto;
+        margin-left: auto;
+        top: calc(3vw + 80px);
+        border-right: 8vw solid transparent;
+        border-left: 8vw solid transparent;
+        border-top:  calc(20vw + 300px) solid #B5ABB5;
+        z-index: 3;
+    }
+    .segundaPagina_filo-sombra{
+        width: 90%;
+        height: 0;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin-right: auto;
+        margin-left: auto;
+        top: calc(3.9vw + 80px);
+        transform: translateX(-7vw) rotate(180deg);
+        border-right: 7vw solid transparent;
+        border-left: 7vw solid #55556D;
+        border-top:  calc(19vw + 290px) solid transparent;
+        filter: blur(2px);
+        z-index: 3;
     }
     .imagenesSet_1{
         height: auto;
