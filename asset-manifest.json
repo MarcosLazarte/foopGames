@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/foopGames/static/css/main.55c1032b.css",
+    "main.css": "/foopGames/static/css/main.89ebd02f.css",
     "main.js": "/foopGames/static/js/main.ef15671a.js",
     "index.html": "/foopGames/index.html",
-    "main.55c1032b.css.map": "/foopGames/static/css/main.55c1032b.css.map",
+    "main.89ebd02f.css.map": "/foopGames/static/css/main.89ebd02f.css.map",
     "main.ef15671a.js.map": "/foopGames/static/js/main.ef15671a.js.map"
   },
   "entrypoints": [
-    "static/css/main.55c1032b.css",
+    "static/css/main.89ebd02f.css",
     "static/js/main.ef15671a.js"
   ]
 }
