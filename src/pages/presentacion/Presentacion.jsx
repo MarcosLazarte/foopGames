@@ -5,26 +5,25 @@ import './presentacion.css'
 const Presentacion = () => {
   const [slide, setSlide] = useState(0);
   const [direccion, setDireccion] = useState(true);
+  const [fecha, setFecha] = useState(new Date())
+
 
    const movement1 = () => {
     if(direccion){
       switch(slide){
         case 0:
           return 'imagenesSet_1'
-          break;
         case 1:
           return 'animateImg1'
-          break;
         case 2:
           return 'imagentest1'
-          break;
         case 3:
           return 'animateImg4'
-          break;
         case 4:
           setSlide(1);
           return 'animateImg4'
-          break;
+        default:
+          return 'imagenes_default';
       }
     } else {
       switch(slide){
@@ -33,20 +32,17 @@ const Presentacion = () => {
           break;
         case 0:
           return 'animateImg1_Der'
-          break;
         case 1:
           return 'animateImg1'
-          break;
         case 2:
           return 'animateImg3_Der'
-          break;
         case 3:
           return 'animateImg4'
-          break;
         case 4:
           setSlide(1);
-          return 'animateImg4'
-          break;
+          return 'animateImg4';
+        default:
+          return 'imagenes_default';
       }
     }
    }
@@ -55,20 +51,17 @@ const Presentacion = () => {
       switch(slide){
         case 0:
           return 'imagenesSet_1'
-          break;
         case 1:
           return 'animateImg1'
-          break;
         case 2:
           return 'animateImg2'
-          break;
         case 3:
           return 'imagenesSet_1'
-          break;
         case 4:
           setSlide(1);
-          return 'animateImg4'
-          break;
+          return 'animateImg4';
+        default:
+          return 'imagenes_default';
       }
     } else {
       switch(slide){
@@ -77,20 +70,17 @@ const Presentacion = () => {
           break;
         case 0:
           return 'animateImg1_Der'
-          break;
         case 1:
           return 'animateImg2_Der'
-          break;
         case 2:
           return 'imagentest2'
-          break;
         case 3:
           return 'imagenesSet_1'
-          break;
         case 4:
           setSlide(1);
           return 'animateImg4'
-          break;
+        default:
+          return 'imagenes_default';
       }
     }
     
@@ -100,21 +90,18 @@ const Presentacion = () => {
       switch(slide){
         case 0:
           return 'imagenesSet_1'
-          break;
         case 1:
           return 'imagenesSet_1'
-          break;
         case 2:
           return 'animateImg2'
-          break;
         case 3:
           return 'animateImg3'
-          break;
         case 4:
           setSlide(1);
           return 'animateImg4'
-          break;
-      }
+        default:
+          return 'imagenes_default';
+        }
     } else {
       switch(slide){
         case -1:
@@ -122,24 +109,31 @@ const Presentacion = () => {
           break;
         case 0:
           return 'imagenesSet_1'
-          break;
         case 1:
           return 'animateImg2_Der'
-          break;
         case 2:
           return 'animateImg4_Der'
-          break;
         case 3:
           return 'animateImg3'
-          break;
         case 4:
           setSlide(1);
           return 'animateImg4'
-          break;
+        default:
+          return 'imagenes_default';        
       }
     }
    }
-   
+
+   useEffect( () => {
+    const timer = setInterval( () => {
+      setFecha(new Date());
+    }, 1000)
+    return () => {
+      clearInterval(timer);
+    }
+   }, [])
+
+   const time = fecha.toLocaleTimeString('en', { hour : 'numeric', hour12: true, minute: 'numeric', second: 'numeric'});
 
   return (
     <div className='testtt'>
@@ -192,34 +186,33 @@ const Presentacion = () => {
               <img id='id_imagenesSet_1' className={movement1()} src="https://compass-ssl.xbox.com/assets/af/29/af290be8-5d42-4bb8-a699-cf4dac686837.jpg?n=995201_Gallery_01_1350x759_01.jpg" alt="" />
               <img id='id_imagenesSet-2' className={movement2()} src="https://compass-ssl.xbox.com/assets/8a/e1/8ae174c0-a3e0-428c-8c4d-af83b0e32796.jpg?n=995201_Gallery_02_1350x759_01.jpg" alt="" />   
               <img id='id_imagenesSet-3' className={movement3()} src="https://compass-ssl.xbox.com/assets/e4/ba/e4ba633d-647c-4e8b-a11b-18b15606144b.jpg?n=995201_Gallery_04_1350x759_01.jpg" alt="" />
-              <div className='segundaPagina_botonIzq' 
+              <button className='segundaPagina_botonIzq' 
                 onClick={ () => {
                   setSlide(slide - 1);
                   setDireccion(false)
-                  }}>‹❮</div>
-              <div className='segundaPagina_botonDer'
+                  }}>‹❮</button>
+              <button className='segundaPagina_botonDer'
                 onClick={ () => {
                   setSlide(slide + 1);
                   setDireccion(true)
-                  }}>❯›</div>
+                  }}>❯›</button>
             </div>
           </div>
-          <h2 className='segundaPagina_titulo'>Caracteristicas</h2>
+          <h2 className='segundaPagina_Subtitulo'>Caracteristicas</h2>
           <div className='segundaPagina_setLineas'>
             <div className='segundaPagina_linea'></div>
             <div className='segundaPagina_linea'></div>
             <div className='segundaPagina_linea'></div>
           </div>
           <p className='segundaPagina_parrafo'>
-            Inicia sesión y ten acceso a la APi RAWG, la base de datos
-            y servicio de busqueda de juegos más grande del mundo. 
-            foopGAmes combinado con RAWG te ofrecera comodidad y accesibilidad que te
-            permitira concentrarte solo en lo que importa: JUGAR 
+            
+
           </p>
 
           <div className='segundaPagina_columnas'>
             <div className='segundaPagina_columnasParrafo'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, sed velit? At dolorem architecto maiores laboriosam, mollitia odio perspiciatis totam consectetur enim eaque iste quas, quae quos dolores fugit nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quae a ab asperiores mollitia dolor eligendi sint modi enim distinctio minus, voluptates maxime commodi, voluptate, hic pariatur odio similique reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores veniam consequatur, a dignissimos ut culpa qui. Fugit praesentium iste deleniti deserunt cumque alias quasi ex, et temporibus rerum aspernatur aut. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, ipsum iure? Iste laboriosam nulla architecto atque quasi perspiciatis est facere accusantium, accusamus obcaecati. Cumque temporibus eaque doloribus minima, iusto architecto.
+            Inicia sesión y ten acceso a la APi RAWG, la base de datos
+            y servicio de busqueda de juegos más grande del mundo. 
             </div>
             <div className='segundaPagina_nailSet'>
               <div className='segundaPagina_mango'></div>
@@ -228,16 +221,20 @@ const Presentacion = () => {
               <div className='segundaPagina_filo-sombra'></div>
             </div>
             <div className='segundaPagina_columnasParrafo'>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis architecto officia aperiam fugiat, laborum cupiditate iusto eos, exercitationem deserunt sequi cumque, voluptas nesciunt blanditiis natus provident commodi quibusdam aliquam? Ea. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi corrupti, voluptas quas error harum expedita in? Magnam excepturi, autem omnis, vero architecto quibusdam hic unde officia ipsum quisquam consequuntur quia!
-            </div>
+            foopGAmes combinado con RAWG te ofrecera comodidad y accesibilidad que te
+            permitira concentrarte solo en lo que importa: JUGAR             </div>
           </div>
         </section>
 
         <section className='terceraPagina'>
+          <h3>linkedin</h3>
+          <p>linkedin/aky</p>
+          <h3>marcos lazarte</h3>
+          <h3>Charlemos</h3>
         </section>
         <section>
           <footer>
-
+            {time}
           </footer>
         </section>
         <nav className='presentacion_nav'>
