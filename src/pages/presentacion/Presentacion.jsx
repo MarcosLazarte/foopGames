@@ -136,7 +136,7 @@ const Presentacion = () => {
    const time = fecha.toLocaleTimeString('en', { hour : 'numeric', hour12: true, minute: 'numeric', second: 'numeric'});
 
   return (
-    <div className='testtt'>
+    <div>
 
         <section className='primeraPagina'>
           <div>
@@ -211,8 +211,8 @@ const Presentacion = () => {
 
           <div className='segundaPagina_columnas'>
             <div className='segundaPagina_columnasParrafo'>
-            Inicia sesión y ten acceso a la APi RAWG, la base de datos
-            y servicio de busqueda de juegos más grande del mundo. 
+              Inicia sesión y ten acceso a la APi RAWG, la base de datos
+              y servicio de busqueda de juegos más grande del mundo. Son solo dos pasos!
             </div>
             <div className='segundaPagina_nailSet'>
               <div className='segundaPagina_mango'></div>
@@ -221,22 +221,44 @@ const Presentacion = () => {
               <div className='segundaPagina_filo-sombra'></div>
             </div>
             <div className='segundaPagina_columnasParrafo'>
-            foopGAmes combinado con RAWG te ofrecera comodidad y accesibilidad que te
-            permitira concentrarte solo en lo que importa: JUGAR             </div>
+              foopGAmes combinado con RAWG te ofrecera comodidad y accesibilidad que te
+              permitira concentrarte solo en lo que importa: JUGAR
+            </div>
           </div>
         </section>
 
-        <section className='terceraPagina'>
-          <h3>linkedin</h3>
-          <p>linkedin/aky</p>
-          <h3>marcos lazarte</h3>
-          <h3>Charlemos</h3>
+        <section className='tercerPagina'>
+          <div className='tercerPagina_boton'>
+            <p className='tercerPagina_boton-texto'>
+              <div>Inicia Sesion/Registrate</div>
+            </p>
+            <div className='tercerPagina_boton-agujero'></div>
+          </div>
         </section>
-        <section>
-          <footer>
+
+        <section className='cuartaPagina'>
+          <div className='cuartaPagina_card'>
+            <h2 className='cuartaPagina_card-titulo'>Algo Nuevo</h2>
+            <p className='cuartaPagina_card-parrafo'>Por que es algo interesante y que deberias probar, razones, muchas, ganas de escribirlas, pocas! Jeje</p>
+          </div>
+          <div className='cuartaPagina_card2'>
+            <h2>foopGames</h2>
+          </div>
+          <div className='cuartaPagina_card'>
+            <h2 className='cuartaPagina_card-titulo'>Algo Nuevo</h2>
+            <p className='cuartaPagina_card-parrafo'>Por que es algo interesante y que deberias probar, razones, muchas, ganas de escribirlas, pocas! Jeje</p>
+          </div>
+        </section>
+
+        <section className='quintaPagina'>
+          <div>
+            <div className='quintaPagina_detalle-dibujo'></div>
+          </div>
+
+        </section>
+        <footer>
             {time}
           </footer>
-        </section>
         <nav className='presentacion_nav'>
         <Link to='/login'><button className='nav_botonLogin'>L</button></Link>
         <Link to='/inicio'> <button className='nav_botonInicio'>I</button></Link>

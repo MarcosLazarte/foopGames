@@ -190,11 +190,6 @@
     .segundaPagina{
         background: linear-gradient(#151737, black 50%);
         width: 100%;
-        height: 200vh;
-    }
-    .terceraPagina{
-        width: 100%;
-        height: 100vh;
     }
     .primeraPagina_titulo-letraImp{
         color: white;
@@ -301,15 +296,17 @@
         grid-template-rows: auto;
     }
     .segundaPagina_columnasParrafo{
-        margin-right: 3vw;
-        margin-left: 3vw;
+        margin-right: 5vw;
+        margin-left: 5vw;
         text-align: center;
         font-size: 4vw;
         margin-top: 10vw;
-        line-height: 8vw;
+        line-height: 6vw;
+        font-style: italic;
     }
     .segundaPagina_nailSet{
         position: relative;
+        height: calc(24vw + 380px);
     }
     .segundaPagina_mango{
         background-color: #B5ABB5;
@@ -500,10 +497,86 @@
         animation-duration: 1s;
         animation-fill-mode: forwards;
     }
-    .terceraPagina{
+    .tercerPagina{
+        margin-top: 30vw;
+        margin-bottom: 30vw;
         width: 100%;
+    }
+    .tercerPagina_boton{
+        height: 10vw;
+        width: 93.5%;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 25vw;
+        background-color: #0B535C;
+        position: relative;
+    }
+    .tercerPagina_boton-texto{
+        height: 10vw;
+        font-size: 5vw;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .tercerPagina_boton-agujero{
+        height: 10vw;
+        width: 10vw;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: scale(1.04);
+        background-color: black;
+        border-radius: 50%;
+    }
+    .cuartaPagina{
+        width: 100%;
+    }
+    .cuartaPagina_card{
+        background-color: #0B535C;
+        width: 100%;
+        height: 75vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cuartaPagina_card2{
+        width: 100%;
+        height: 50vw;
+        text-align: center;
+        font-size: 8vw;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cuartaPagina_card-titulo{
+        font-size: 10vw;
+        text-transform: uppercase;
+        text-align: right;
+        color: whitesmoke;
+        z-index: 1;
+        padding-top: 7vw;
+    }
+    .cuartaPagina_card-parrafo{
+        font-size: 4vw;
+        margin-top: 10vw;
+        padding-bottom: 7vw;
+        text-align: center;
+        margin-right: 3vw;
+        margin-left: 3vw;
+    }
+    .quintaPagina{
+        background-color: #D6CECA;
         height: 100vh;
-        background-color: #151737;
+        width: 100%;
+    }
+    .quintaPagina_detalle-dibujo{
+        background-color: #D6CECA;
+        border-left: 95vw solid black;
+        border-bottom: 30vw solid transparent;
     }
 }
 @media screen and (min-width: 768px){
