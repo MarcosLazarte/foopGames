@@ -30,6 +30,39 @@ const Inicio = () => {
 
   return (
     <div>
+      <nav>
+        <section>
+          <h1>foopGames</h1>
+          <section>
+            <button>C</button>
+            <button>L</button>
+            <button>P</button>
+            <button>O</button>
+          </section>
+        </section>
+        <section>
+          <ul>
+            <li>Inicio</li>
+            <li>Noticias</li>
+            <li>Artículos</li>
+            <li>Análisis</li>
+            <li>Guías</li>
+          </ul>
+        </section>
+      </nav>
+      
+      <main>
+        <div>
+          map array
+        </div>
+      </main>
+      
+      <footer>
+
+      </footer>
+    </div>
+    /*
+    <div>
       <section className='inicio_setHeader'>
         <h3 className='inicio_titulo'>API-Games</h3>
         <Link to='/test'>
@@ -50,6 +83,7 @@ const Inicio = () => {
         <img src="" alt="" />
       </section>
     </div>
+    */
   )
 }
 
