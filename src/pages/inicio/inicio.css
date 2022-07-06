@@ -59,3 +59,113 @@
     width: 25vw;
     background-color: grey;
 }
+@media screen and (max-width: 480px){
+    .nav{
+        background-color: #71E5B8;
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+    .nav_logos{
+        background-color: blue;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .nav_barra-setItems{
+        background-color: blueviolet;
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+    }
+    .cardSet{
+        white-space: nowrap;
+    }
+    @keyframes moveCardSet1 {
+        from{transform: translate();}
+        to{transform: translateX(-100%);}
+    }
+    @keyframes moveCardSet2 {
+        from{transform: translate(-100%);}
+        to{transform: translateX(-200%);}
+    }
+    @keyframes moveCardSet3 {
+        from{transform: translate(-200%);}
+        to{transform: translateX(-300%);}
+    }
+    @keyframes moveCardSet4 {
+        from{transform: translate(-300%);}
+        to{transform: translateX(-400%);}
+    }
+    @keyframes moveCardSet5 {
+        from{transform: translate(-400%)}
+        to{transform: translateX(-500%);}
+    }
+
+    @keyframes moveIzqCardSet1 {
+        from{transform: translateX(-100%);}
+        to{transform: translateX(0%);}
+    }
+    @keyframes moveIzqCardSet2 {
+        from{transform: translateX(-200%);}
+        to{transform: translateX(-100%);}
+    }
+    @keyframes moveIzqCardSet3 {
+        from{transform: translateX(-300%);}
+        to{transform: translateX(0%);}
+    }
+    .cardSet_moveDer1{
+        white-space: nowrap;
+        animation-name: moveCardSet1;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .cardSet_moveDer2{
+        white-space: nowrap;
+        animation-name: moveCardSet2;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .cardSet_moveDer3{
+        white-space: nowrap;
+        animation-name: moveCardSet3;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .cardSet_moveDer4{
+        white-space: nowrap;
+        animation-name: moveCardSet4;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .cardSet_moveDer5{
+        white-space: nowrap;
+        animation-name: moveCardSet5;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .cardSet_extremoDer{
+        white-space: nowrap;
+        transform: translateX(-200%);
+    }
+    .cardSet_extremoIzq{
+        white-space: nowrap;
+    }
+    .cardSet_moveIzq1{
+        white-space: nowrap;
+        animation-name: moveIzqCardSet1;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .cardSet_moveIzq2{
+        white-space: nowrap;
+        animation-name: moveIzqCardSet2;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .cardSet_moveIzq3{
+        white-space: nowrap;
+        animation-name: moveIzqCardSet3;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+
+}

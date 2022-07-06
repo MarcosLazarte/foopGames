@@ -1,0 +1,13 @@
+.card_set{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+.card_img{
+    width: 100%;
+    opacity: 0.5;
+}
+.card_title{
+    position: absolute;
+    bottom: 5vw;
+}
