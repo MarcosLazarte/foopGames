@@ -3,10 +3,13 @@ import Card from '../../components/card/Card';
 import { Link } from 'react-router-dom';
 import { auth } from '../../firebaseconfig';
 import GameCard from '../../components/inicio_game-card/GameCard';
+import ListaCards from '../../components/listaCards/ListaCards';
+
 import './inicio.css';
 
 const Inicio = () => {
   const [lista, setLista] = useState([]);
+  const [listaInicio, setListaInicio] = useState([]);
   const [slide, setSlide] = useState(0);
   const [direccion, setDireccion] = useState(true);
   const key = 'ac4078b5e6ae4e6ba2a4cf37bc6cf96a';
@@ -17,6 +20,14 @@ const Inicio = () => {
     .then(data => {
       console.log(data.results);
       setLista(data.results)
+    });
+  },[])
+
+  useEffect( () => {
+    fetch(`https://api.rawg.io/api/games?key=${key}&page_size=8`)
+    .then(response => response.json())
+    .then(data => {
+      setListaInicio(data.results)
     });
   },[])
 
@@ -67,7 +78,7 @@ const Inicio = () => {
         </ul>
       </nav>
       
-      <main>
+      <main className='inicioMain'>
         <button onClick={() => {
                 setSlide(slide - 1);
                 setDireccion(false)
@@ -82,8 +93,19 @@ const Inicio = () => {
           }
         </div>
 
-        <section>
-          holangas!
+        <section className='divMayor'>
+          <h2>Novedades</h2>
+          <div className='imagesDiv'>
+            <div className='imagenes'>Te amo melinda, se corre para la derecha </div>
+            <div className='imagenes'>Aprendi a usar esto sin la necesidad de botones</div>
+            <div className='imagenes'>Me quiero morir de no haberlo descubierto antes</div>
+          </div>
+
+          <div className='divLista'>
+            {
+              listaInicio.map( e => <ListaCards key={listaInicio.id} {...e}/>)
+            }
+          </div>
         </section>
       </main>
       

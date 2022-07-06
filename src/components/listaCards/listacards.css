@@ -1,0 +1,9 @@
+.listaCards{
+    overflow: hidden;
+}
+.listaCards_imagen{
+    width: 100%;
+}
+.listaCards_titulo{
+    font-size: 6vw;
+}

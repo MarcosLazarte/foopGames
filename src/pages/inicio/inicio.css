@@ -166,6 +166,31 @@
         animation-duration: 1s;
         animation-fill-mode: forwards;
     }
-
-
+    .inicioMain{
+        overflow: hidden;
+    }
+    .divMayor{
+        overflow: hidden;
+    }
+    .imagesDiv{
+        background-color: #eee;
+        display: grid;
+        width: 100%;
+        background-color: #71E5B8;
+        grid-template-columns: 90% 90% 90%;
+        overflow-x: scroll;
+    }
+    .imagenes{
+        float: inline-end;
+        height: 200px;
+        width: 1101px;
+        border: 1px solid black;
+        background-color: blue;
+        flex-basis: 0;
+        flex-grow: 1;
+        overflow: hidden;
+    }
+    .divLista{
+        background-color: grey;
+    }
 }
