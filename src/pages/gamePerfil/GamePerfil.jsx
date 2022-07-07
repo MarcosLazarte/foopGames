@@ -5,7 +5,6 @@ import './gamePerfil.css';
 
 const GamePerfil = () => {
   const {juegoIndividual, setJuegoIndividual} = useContext(IndividualDisplayContext);
-  console.log(juegoIndividual)
   const key = 'ac4078b5e6ae4e6ba2a4cf37bc6cf96a';
   const [datos, setDatos] = useState({});
   let { games } = useParams();
@@ -21,11 +20,19 @@ const GamePerfil = () => {
 
   return (
     <div>
-      <div className='gamePerfil_degrade'></div>
-      <div className='gamePerfil_imagenDiv'>
-        <img className='gamePerfil_imagen' src={datos.background_image} alt="" />
-      </div>
-        <h2 className='gamePerfil_titulo'>{juegoIndividual}</h2>
+      <section>
+        <div className='gamePerfil_degrade'></div>
+        <div className='gamePerfil_imagenExtDiv'>
+          <div className='gamePerfil_imagenDiv'>
+            <img className='gamePerfil_imagen' src={datos.background_image} alt="" />
+          </div>
+          <h2 className='gamePerfil_titulo'>{datos.name}</h2>
+          <h2 className='gamePerfil_titulo'>{datos.developers[0].name}</h2>
+        </div>
+      </section>
+
+      <section className='gamePerfil_paginaDos'>
+      </section>
     </div>
   )
 }
