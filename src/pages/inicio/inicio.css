@@ -60,18 +60,35 @@
     background-color: grey;
 }
 @media screen and (max-width: 480px){
+    ::-webkit-scrollbar {
+        width: 3vw;
+        background-color: #71E5B8;
+    }
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
+    }
+       
+    ::-webkit-scrollbar-thumb {
+        background-color: #260B40; 
+        border-radius: 10px;
+    }
+      
+    ::-webkit-scrollbar-thumb:hover {
+        background: #8640A8; 
+    }
     .nav{
         background-color: #71E5B8;
         display: grid;
         grid-template-rows: auto auto;
     }
     .nav_logos{
-        background-color: blue;
+        background-color: #71E5B8;
         display: grid;
         grid-template-columns: auto auto;
     }
     .nav_barra-setItems{
-        background-color: blueviolet;
+        background-color: #260B40;
         display: grid;
         grid-template-columns: 25% 25% 25%;
     }
@@ -185,7 +202,7 @@
         height: 200px;
         width: 1101px;
         border: 1px solid black;
-        background-color: blue;
+        background-color: #8640A8;
         flex-basis: 0;
         flex-grow: 1;
         overflow: hidden;

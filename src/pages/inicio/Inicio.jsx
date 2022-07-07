@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { auth } from '../../firebaseconfig';
 import GameCard from '../../components/inicio_game-card/GameCard';
 import ListaCards from '../../components/listaCards/ListaCards';
+import IndividualDisplayContext from '../../context/individualDisplayContext';
 
 import './inicio.css';
 
@@ -103,7 +104,7 @@ const Inicio = () => {
 
           <div className='divLista'>
             {
-              listaInicio.map( e => <ListaCards key={listaInicio.id} {...e}/>)
+              listaInicio.map( e => <Link to={'/games/'+e.slug}><ListaCards key={listaInicio.id} {...e}/></Link>)
             }
           </div>
         </section>

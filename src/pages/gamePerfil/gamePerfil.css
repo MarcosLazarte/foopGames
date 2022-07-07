@@ -1,0 +1,19 @@
+.gamePerfil_imagenDiv{
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#f69d3c, #3f87a6);
+}
+.gamePerfil_degrade{
+    height: 100vh;
+}
+.gamePerfil_imagen{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(-640px);
+}
+.gamePerfil_titulo{
+    color: tomato;
+}
