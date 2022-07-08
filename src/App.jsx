@@ -6,13 +6,13 @@ import Inicio from './pages/inicio/Inicio';
 import TestApi from './components/testApi/TestApi';
 import GamePerfil from './pages/gamePerfil/GamePerfil';
 import Presentacion from './pages/presentacion/Presentacion';
-import { individualDisplayProvider } from './context/individualDisplayContext';
+import { IndividualDisplayProvider } from './context/individualDisplayContext';
 
 const App = () => {
   const [juegoIndividual, setJuegoIndividual] = useState({});
   return (
     <div>
-      <individualDisplayProvider value={{juegoIndividual, setJuegoIndividual}}>
+      <IndividualDisplayProvider value={{juegoIndividual, setJuegoIndividual}}>
         <Router>
           <Routes>
             <Route exact path='/' element={<Presentacion/>}></Route>
@@ -25,7 +25,7 @@ const App = () => {
             <Route path='/games/:games' element={<GamePerfil/>}></Route>
           </Routes>
         </Router>
-      </individualDisplayProvider>
+      </IndividualDisplayProvider>
     </div>
   )
 }

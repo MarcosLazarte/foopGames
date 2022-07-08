@@ -19,7 +19,6 @@ const TestApi = () => {
 
 	//Dos useEffect, uno para asegurarme que apenas se renderice el Dom, se setee el usuarioUID y otro para usar esa variable
 	useEffect( () => {
-
 		function getUser(){
 			auth.onAuthStateChanged( (user) => {
 				if(user){
@@ -30,11 +29,9 @@ const TestApi = () => {
 			});
 		}
 		getUser();
-
 	}, []);
 
 	useEffect( () => {
-
 		async function datos(){
 			const docs = await store.collection('users').doc(usuarioUID).get().then(doc => {
 				return(doc.data())
