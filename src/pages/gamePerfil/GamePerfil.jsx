@@ -52,8 +52,8 @@ const GamePerfil = () => {
     const fondo = {
       backgroundImage: `url(${datos.background_image})`,
       backgroundPosition: 'center',
-      backgroundSize: 'auto 100vh',
-      backgroundAttachment: 'fixed',
+      backgroundSize: 'cover',
+      position: 'fixed',
       width: '100%',
       height: '100vh',
     }
@@ -79,18 +79,36 @@ const GamePerfil = () => {
           <div className='gamePerfil_imagenDiv'>
             {/*<img className='gamePerfil_imagen' src={datos.background_image} alt="" />*/}
           </div>
-          <div className='gamePerfil_titulo'>
-            { loaded ? <h2>{datos.name}</h2> : <div>...cargando</div>}
-            {
-              loaded ? <div>{datos.developers[0].name}</div> : <div>...cargando</div>
-            }
+          <div className='HUD'>
+            <div className='HUD_Up'>
+              
+              <div className='HUD_divDetalles'>
+                { loaded ? <h2 className='HUD_detalles-titulo'>{datos.name}</h2> : <h3>...cargando</h3>}
+                { loaded ? <h3 className='HUD_detalles'>{datos.developers[0].name}</h3> : <h3>...cargando</h3>}
+                { loaded ? <h3 className='HUD_detalles'>{datos.rating}</h3> : <h3>...cargando</h3>}
+              </div>
+              <div className='HUD_divBuy'>
+                <button className='HUD_buy'>BUY</button>
+              </div>
+            </div>
+
+            <div className='HUD_Down'>
+              <button className='HUD_terminado'>Terminado?</button>
+            </div>
+            
           </div>
         </div>
       </section>
 
       <section className='gamePerfil_paginaDos'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur deserunt eligendi dolore delectus facilis non! Facere amet labore, expedita placeat aliquam dolorum, non magnam dolor nostrum laboriosam doloremque minus quasi!
+        <h2>nuevo</h2>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus voluptatem quia laudantium reprehenderit expedita. Ad deleniti, asperiores minima possimus voluptatem eaque culpa natus est sapiente adipisci voluptate iure nesciunt amet.
+
       </section>
+      <footer className='asdf'>
+        <h3>final del footer</h3>
+      </footer>
     </div>
   )
 }
