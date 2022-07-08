@@ -37,7 +37,7 @@ const GamePerfil = () => {
     const newData = await response.json();
     setDatos(newData);
   };
-
+//Aca lo importante es que traigo la data, como tarda en cargarla, uso otro useEffect para que refresque el contenido del DOM cuando termine de conseguir toda la data
   useEffect( () => {
     fetchData()
     .catch(console.error)
@@ -52,7 +52,7 @@ const GamePerfil = () => {
     const fondo = {
       backgroundImage: `url(${datos.background_image})`,
       backgroundPosition: 'center',
-      backgroundSize: 'cover',
+      backgroundSize: 'auto 100vh',
       backgroundAttachment: 'fixed',
       width: '100%',
       height: '100vh',

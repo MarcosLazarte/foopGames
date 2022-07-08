@@ -80,19 +80,24 @@ const Inicio = () => {
       </nav>
       
       <main className='inicioMain'>
-        <button onClick={() => {
-                setSlide(slide - 1);
-                setDireccion(false)
-              }}>left</button>
-        <button onClick={() => {
-                setSlide(slide + 1);
-                setDireccion(true)
-              }}>right</button>
+        <div className='inicioMain_containerImagenesCabezera'>
         <div className={moverDer()}>
+          
           {
             lista.map( e => <Card key={lista.id} {...e}/> )
           }
+          
         </div>
+        <button className='inicioMain_botonLeft' onClick={() => {
+                setSlide(slide - 1);
+                setDireccion(false)
+              }}>❮</button>
+        <button className='inicioMain_botonRight' onClick={() => {
+                setSlide(slide + 1);
+                setDireccion(true)
+              }}>❯</button>
+        </div>
+
 
         <section className='divMayor'>
           <h2>Novedades</h2>

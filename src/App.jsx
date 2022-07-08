@@ -19,10 +19,12 @@ const App = () => {
             <Route exact path='/foopGames' element={<Presentacion/>}></Route>
             <Route exact path='/marcoslazarte.github.io/foopGames' element={<Presentacion/>}></Route>
             <Route path='/inicio' element={<Inicio/>}></Route>
+            <Route exact path='/marcoslazarte.github.io/inicio' element={<Inicio/>}></Route>
             <Route path='/perfil' element={<Perfil/>}></Route>
             <Route path='/login' element={<Login/>}></Route>
             <Route path='/test' element={<TestApi/>}></Route>
             <Route path='/games/:games' element={<GamePerfil/>}></Route>
+            <Route exact path='/marcoslazarte.github.io/games/:games' element={<GamePerfil/>}></Route>
           </Routes>
         </Router>
       </IndividualDisplayProvider>
