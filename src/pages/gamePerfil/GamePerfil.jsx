@@ -11,6 +11,8 @@ const GamePerfil = () => {
   const [flag, setFlag] = useState(false);
   const [dev, setDev] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
 
   const llamar = () => {
     fetch(`https://api.rawg.io/api/games/${games}?key=${key}`)
@@ -43,14 +45,20 @@ const GamePerfil = () => {
   },[]);
 
   useEffect( () => {
-    if(datos){
-      setDev(datos.developers[0].name)
-      console.log(dev)
-      setFlag('true')
-      console.log(flag)
-    }
+    if(datos) setLoaded(true)
   },[datos]);
-  
+
+  const fondoTest = () => {
+    const fondo = {
+      backgroundImage: `url(${datos.background_image})`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundAttachment: 'fixed',
+      width: '100%',
+      height: '100vh',
+    }
+    return fondo;
+  }
  /*
   const fetchData = useCallback(async () => {
     const data = await fetch (`https://api.rawg.io/api/games/${games}?key=${key}`);
@@ -67,20 +75,21 @@ const GamePerfil = () => {
       <section>
         <div className='gamePerfil_degrade'></div>
         <div className='gamePerfil_imagenExtDiv'>
+          <div style = {fondoTest()}></div>
           <div className='gamePerfil_imagenDiv'>
-            <img className='gamePerfil_imagen' src={datos.background_image} alt="" />
+            {/*<img className='gamePerfil_imagen' src={datos.background_image} alt="" />*/}
           </div>
           <div className='gamePerfil_titulo'>
-            <h2>{datos.name}</h2>
+            { loaded ? <h2>{datos.name}</h2> : <div>...cargando</div>}
             {
-              flag ? <div>{dev}</div> : <div>...cargando</div>
+              loaded ? <div>{datos.developers[0].name}</div> : <div>...cargando</div>
             }
-           { /*<h2>{datos.developers[0].name}</h2>*/}
           </div>
         </div>
       </section>
 
       <section className='gamePerfil_paginaDos'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur deserunt eligendi dolore delectus facilis non! Facere amet labore, expedita placeat aliquam dolorum, non magnam dolor nostrum laboriosam doloremque minus quasi!
       </section>
     </div>
   )

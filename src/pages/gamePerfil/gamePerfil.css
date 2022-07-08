@@ -22,8 +22,8 @@
 }
 .gamePerfil_titulo{
     position: absolute;
-    bottom: 0;
-    color: tomato;
+    bottom: 5vw;
+    font-size: 8vw;
     z-index: 2;
 }
 .gamePerfil_paginaDos{
