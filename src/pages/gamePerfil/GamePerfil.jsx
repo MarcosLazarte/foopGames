@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext, useCallback } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import IndividualDisplayContext from '../../context/individualDisplayContext';
 import './gamePerfil.css';
 
@@ -13,7 +13,7 @@ const GamePerfil = () => {
   const [loading, setLoading] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
-
+/*
   const llamar = () => {
     fetch(`https://api.rawg.io/api/games/${games}?key=${key}`)
     .then(response => response.json())
@@ -35,6 +35,7 @@ const GamePerfil = () => {
     setLoading(true);
     const response = await fetch(`https://api.rawg.io/api/games/${games}?key=${key}`);
     const newData = await response.json();
+    console.log(newData)
     setDatos(newData);
   };
 //Aca lo importante es que traigo la data, como tarda en cargarla, uso otro useEffect para que refresque el contenido del DOM cuando termine de conseguir toda la data
@@ -48,6 +49,11 @@ const GamePerfil = () => {
     if(datos) setLoaded(true)
   },[datos]);
 
+  const convertStringToHMTL = (stringo) => {
+    let parser = new DOMParser();
+    let doc = parser.parseFromString(stringo, 'text/html');
+    return doc.body.firstChild.textContent;
+  }
   const fondoTest = () => {
     const fondo = {
       backgroundImage: `url(${datos.background_image})`,
@@ -84,8 +90,8 @@ const GamePerfil = () => {
               
               <div className='HUD_divDetalles'>
                 { loaded ? <h2 className='HUD_detalles-titulo'>{datos.name}</h2> : <h3>...cargando</h3>}
-                { loaded ? <h3 className='HUD_detalles'>{datos.developers[0].name}</h3> : <h3>...cargando</h3>}
-                { loaded ? <h3 className='HUD_detalles'>{datos.rating}</h3> : <h3>...cargando</h3>}
+                { loaded ? <h3 className='HUD_developer'>{datos.developers[0].name}</h3> : <h3>...cargando</h3>}
+                { loaded ? <h3 className='HUD_metacritic'>Metacritic: {datos.metacritic}</h3> : <h3>...cargando</h3>}
               </div>
               <div className='HUD_divBuy'>
                 <button className='HUD_buy'>BUY</button>
@@ -101,7 +107,9 @@ const GamePerfil = () => {
       </section>
 
       <section className='gamePerfil_paginaDos'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur deserunt eligendi dolore delectus facilis non! Facere amet labore, expedita placeat aliquam dolorum, non magnam dolor nostrum laboriosam doloremque minus quasi!
+        <article className='gamePerfil_paginaDos-article'>
+          {loaded ? /*(datos.description).replace(/<p>|<\/p>/g, '')*/<div>{convertStringToHMTL(datos.description)}</div> : <h3>...cargando</h3>}
+        </article>
         <h2>nuevo</h2>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus voluptatem quia laudantium reprehenderit expedita. Ad deleniti, asperiores minima possimus voluptatem eaque culpa natus est sapiente adipisci voluptate iure nesciunt amet.
 
@@ -109,6 +117,9 @@ const GamePerfil = () => {
       <footer className='asdf'>
         <h3>final del footer</h3>
       </footer>
+      <nav className='gamePerfil_nav'>
+        <Link to={'/inicio'}> ❮ </Link>
+      </nav>
     </div>
   )
 }

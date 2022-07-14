@@ -1,3 +1,11 @@
+.gamePerfil_nav{
+    position: fixed;
+    top: 0;
+    right: 5vw;
+    color: white;
+    font-size: 10vw;
+    z-index: 2;
+}
 .gamePerfil_degrade{
     position: absolute;
     width: 100%;
@@ -23,19 +31,27 @@
 .HUD{
     position: absolute;
     width: 100%;
-    bottom: 30vw;
+    bottom: 10vw;
     z-index: 2;
     display: grid;
     grid-template-rows: auto auto;
     font-family: sans-serif;
 }
 .HUD_detalles-titulo{
-    font-size: 7vw;
+    font-size: 8vw;
 }
-.HUD_detalles{
-    font-size: 4vw;
+.HUD_developer{
+    font-size: 3.2vw;
     margin-top: 1.1vw;
     margin-bottom: 1.1vw;
+    font-weight: 100;
+}
+.HUD_metacritic{
+    font-size: 3vw;
+    margin-top: 1.1vw;
+    margin-bottom: 1.1vw;
+    font-weight: 100;
+    font-style: italic;
 }
 .HUD_Up{
     display: grid;
@@ -63,8 +79,9 @@
 }
 .HUD_terminado{
     width: 30%;
-    height: 6vw;
-    border-radius: 3vw;
+    height: 9vw;
+    border-radius: 50vw;
+    cursor: pointer;
 }
 .gamePerfil_paginaDos{
     position: relative;
@@ -72,6 +89,10 @@
     height: 100vh;
     width: 100%;
     z-index: 3;
+}
+.gamePerfil_paginaDos-article{
+    margin-right: 1vw;
+    margin-left: 1vw;
 }
 .asdf{
     width: 100%;
