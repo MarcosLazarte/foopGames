@@ -13,6 +13,7 @@ const ListaCards = ({name, short_screenshots, slug}) => {
     <div className='listaCards' onClick={cargarDatoJuego}>
         <img className='listaCards_imagen' src={short_screenshots[0].image} alt={slug} />
         <h3 className='listaCards_titulo'>{name}</h3>
+        <div className='listaCards_bar'></div>
     </div>
   )
 }

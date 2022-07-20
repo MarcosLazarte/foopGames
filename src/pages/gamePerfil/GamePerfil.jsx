@@ -112,7 +112,7 @@ const GamePerfil = () => {
         </article>
         <h2>nuevo</h2>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus voluptatem quia laudantium reprehenderit expedita. Ad deleniti, asperiores minima possimus voluptatem eaque culpa natus est sapiente adipisci voluptate iure nesciunt amet.
-
+        { loaded ? <video src={datos.background_image}>Video</video> : <h3>,,,cargando</h3>}
       </section>
       <footer className='asdf'>
         <h3>final del footer</h3>
