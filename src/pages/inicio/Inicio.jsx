@@ -5,32 +5,96 @@ import { auth } from '../../firebaseconfig';
 import GameCard from '../../components/inicio_game-card/GameCard';
 import ListaCards from '../../components/listaCards/ListaCards';
 import IndividualDisplayContext from '../../context/individualDisplayContext';
+import Footer from '../../components/footer/Footer';
 
 import './inicio.css';
 
 const Inicio = () => {
+  const [pagina, setPagina] = useState(1)
+  const [fecha, setFecha] = useState(new Date());
+  const [listaNovedades, setListaNovedades] = useState(false)
   const [lista, setLista] = useState([]);
   const [listaInicio, setListaInicio] = useState([]);
   const [slide, setSlide] = useState(0);
   const [direccion, setDireccion] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
   const key = 'ac4078b5e6ae4e6ba2a4cf37bc6cf96a';
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setFecha(new Date());
+    }, 1000)
+    return () => {
+      clearInterval(timer);
+    }
+  }, []);
+  const hora = fecha.toLocaleTimeString('en', { hour: 'numeric', hour12: true, minute: 'numeric', second: 'numeric' });
+  const dia = fecha.getDate();
+  let mes = fecha.getMonth() + 3;
+  const anio = fecha.getFullYear();
+  const date = fecha.toLocaleDateString('af-ZA')
+  if(mes < 10) mes = '0' + mes;
+  const mesAdelante = `${anio}-${mes}-${dia}`
+  var date1 = new Date();
+
+  var options = {
+      year: "numeric",
+      month: "2-digit",
+      day: "numeric"
+  };
+let fechaMejor = date1.toLocaleDateString("af-ZA", options);
+
+//            <img src={listaNovedades.short_screenshots[0].image} alt="" />
 
   useEffect( () => {
     fetch(`https://api.rawg.io/api/games?key=${key}&dates=2022-07-01,2023-01-01&ordering=-added&page_size=3`)
     .then(response => response.json())
     .then(data => {
-      console.log(data.results);
       setLista(data.results)
     });
   },[])
+/*
+  useEffect( () => {
+    console.log(fechaMejor)
+    fetch(`https://api.rawg.io/api/games?key=${key}&dates=${fechaMejor},${mesAdelante}&ordering=-added&page_size=3`)
+    .then(response => response.json())
+    .then(data => {
+      setListaNovedades(data.results)
+      console.log(listaNovedades[0].short_screenshots[0].image)
+    });
+  },[])*/
 
   useEffect( () => {
-    fetch(`https://api.rawg.io/api/games?key=${key}&page_size=8`)
+    fetch(`https://api.rawg.io/api/games?key=${key}&page_size=8&page=${pagina}`)
     .then(response => response.json())
     .then(data => {
       setListaInicio(data.results)
     });
-  },[])
+  }, [pagina])
+
+  
+  const fetchData = async () => {
+    setLoading(true);
+    console.log(fechaMejor)
+    console.log(mesAdelante)
+    const response = await fetch(`https://api.rawg.io/api/games?key=${key}&dates=${fechaMejor},${mesAdelante}&ordering=-added&page_size=3`);
+    const newData = await response.json();
+    setListaNovedades(newData);
+  };
+
+  useEffect( () => {
+    fetchData()
+    .catch(console.error)
+    .finally(setLoading(false))
+  },[]);
+
+  useEffect( () => {
+    if(listaNovedades){
+      setLoaded(true)
+    }
+  },[listaNovedades]);
 
   const moverDer = () => {
     if (direccion) {
@@ -102,9 +166,9 @@ const Inicio = () => {
         <section className='divMayor'>
           <h2>Novedades</h2>
           <div className='imagesDiv'>
-            <div className='imagenes'>Te amo melinda, se corre para la derecha </div>
-            <div className='imagenes'>Aprendi a usar esto sin la necesidad de botones</div>
-            <div className='imagenes'>Me quiero morir de no haberlo descubierto antes</div>
+            { loaded ? <img className='imagenes' src={listaNovedades.results[0].background_image} alt="asdf" /> : <h3>...cargando</h3> }
+            { loaded ? <img className='imagenes' src={listaNovedades.results[1].background_image} alt="asdf" /> : <h3>...cargando</h3> }
+            { loaded ? <img className='imagenes' src={listaNovedades.results[2].background_image} alt="asdf" /> : <h3>...cargando</h3> }
           </div>
 
           <div className='divLista'>
@@ -113,11 +177,11 @@ const Inicio = () => {
             }
           </div>
         </section>
+        <button onClick={ () => setPagina(pagina - 1)}>ATRAS</button>
+        <button onClick={ () => setPagina(pagina + 1)}>SIGUIENTE</button>
       </main>
       
-      <footer>
-        Soy Aky
-      </footer>
+      <Footer/>
     </div>
     /*
     <div>
