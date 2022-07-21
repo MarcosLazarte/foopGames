@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import Footer from '../../components/footer/Footer';
 import './presentacion.css'
 
 const Presentacion = () => {
@@ -246,12 +247,7 @@ const Presentacion = () => {
         </div>
       </section>
 
-      <section className='quintaPagina'>
-        <div>
-          <div className='quintaPagina_detalle-dibujo'></div>
-        </div>
-
-      </section>
+      <Footer/>
       <footer>
         {time}
       </footer>

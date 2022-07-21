@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import Footer from '../../components/footer/Footer';
 import IndividualDisplayContext from '../../context/individualDisplayContext';
 import './gamePerfil.css';
 
@@ -114,9 +115,7 @@ const GamePerfil = () => {
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus voluptatem quia laudantium reprehenderit expedita. Ad deleniti, asperiores minima possimus voluptatem eaque culpa natus est sapiente adipisci voluptate iure nesciunt amet.
         { loaded ? <video src={datos.background_image}>Video</video> : <h3>,,,cargando</h3>}
       </section>
-      <footer className='asdf'>
-        <h3>final del footer</h3>
-      </footer>
+      <Footer/>
       <nav className='gamePerfil_nav'>
         <Link to={'/inicio'}> ❮ </Link>
       </nav>
