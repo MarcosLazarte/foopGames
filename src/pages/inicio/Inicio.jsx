@@ -113,6 +113,7 @@ let fechaMejor = date1.toLocaleDateString("af-ZA", options);
       switch (slide) {
         case -1:
           setSlide(0);
+          setDireccion(true)
           break;
         case 0:
           return 'cardSet_moveIzq1'
@@ -128,12 +129,10 @@ let fechaMejor = date1.toLocaleDateString("af-ZA", options);
     <div>
       <nav className='nav'>
         <section className='nav_logos'>
-          <h1>foopGames</h1>
-          <section>
-            <button>C</button>
-            <button>L</button>
-            <button>P</button>
-            <button>O</button>
+          <h1 className='nav_titulo'>foopGames</h1>
+          <section className='nav_botones'>
+            <button className='nav_boton'>⚲</button>
+            <button className='nav_boton'>⚇</button>
           </section>
         </section>
         <ul className='nav_barra-setItems'>

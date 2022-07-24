@@ -226,24 +226,26 @@ const Presentacion = () => {
 
       <section className='tercerPagina'>
         <div className='tercerPagina_boton'>
+          <Link to={"/Login"}>
           <div className='tercerPagina_boton-texto'>
             <p>Inicia Sesion/Registrate</p>
           </div>
+          </Link>
           <div className='tercerPagina_boton-agujero'></div>
         </div>
       </section>
 
       <section className='cuartaPagina'>
         <div className='cuartaPagina_card'>
-          <h2 className='cuartaPagina_card-titulo'>Algo Nuevo</h2>
-          <p className='cuartaPagina_card-parrafo'>Por que es algo interesante y que deberias probar, razones, muchas, ganas de escribirlas, pocas! Jeje</p>
+          <h2 className='cuartaPagina_card-titulo'>Half-Life 2</h2>
+          <p className='cuartaPagina_card-parrafo'>"The right man in the wrong place can make all the difference in the world."</p>
         </div>
         <div className='cuartaPagina_card2'>
           <h2>foopGames</h2>
         </div>
         <div className='cuartaPagina_card'>
-          <h2 className='cuartaPagina_card-titulo'>Algo Nuevo</h2>
-          <p className='cuartaPagina_card-parrafo'>Por que es algo interesante y que deberias probar, razones, muchas, ganas de escribirlas, pocas! Jeje</p>
+          <h2 className='cuartaPagina_card-titulo'>Castlevania</h2>
+          <p className='cuartaPagina_card-parrafo'>“What is a man? A miserable little pile of secrets!"</p>
         </div>
       </section>
 

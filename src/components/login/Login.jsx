@@ -1,6 +1,9 @@
 import React , { useState } from 'react';
 import { auth, store } from '../../firebaseconfig';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import Footer from '../footer/Footer';
+import FlechaBack from '../flechaBack/FlechaBack';
+import './login.css'
 
 
 const Login = () => {
@@ -48,36 +51,51 @@ const Login = () => {
     }
   return (
     <div>
-        <h1>Login</h1>
-        <p>Inicia sesion plox</p>
-        <form onSubmit={registrarUsuario}>
-            <input 
-              onChange={(e) => {setEmail(e.target.value)}}
-              placeholder='Introduce email'
-              type="email" />
-            <br />
-            <input
-              onChange={(e) => {setPass(e.target.value)}}
-              placeholder='Introduce contraseña'
-              type="password" />
-            <br />
-            <input
-              value='Registrar Usuario'
-              type="submit" />
-        </form>
-        <button style={{color:'red'}} onClick={loginUsuario}>Iniciar Sesion</button>
-        {
-          msgError != null ?
-          (
-            <div>
-              {msgError}
-            </div>
-          )
-          :
-          (
-            <span>{}</span>
-          )
-        }
+      <section className='cuartaPagina'>
+        <div className='cuartaPagina_card'>
+          <h2 className='cuartaPagina_card-titulo'>foopGames</h2>
+        </div>
+        <div className='login_card2'>
+          <h1 className='login_titulo'>Login</h1>
+          <h3 className='login_leyenda'>"Ya te imaginas que hacer"</h3>
+          <form onSubmit={registrarUsuario}>
+              <input
+                className='login_input'
+                onChange={(e) => {setEmail(e.target.value)}}
+                placeholder='Introduce email'
+                type="email" />
+              <br />
+              <input
+                className='login_input'
+                onChange={(e) => {setPass(e.target.value)}}
+                placeholder='Introduce contraseña'
+                type="password" />
+              <br />
+              <input
+                className='login_boton'
+                value='Registrar Usuario'
+                type="submit" />
+          </form>
+          <button className='login_boton' onClick={loginUsuario}>Iniciar Sesion</button>
+          {
+            msgError != null ?
+            (
+              <h4 className='login_error'>
+                {msgError}
+              </h4>
+            )
+            :
+            (
+              <span>{}</span>
+            )
+          }
+        </div>
+        <div className='cuartaPagina_card'>
+          <h2 className='login_card-titulo'>Inicia sesión o registrate <br /> <span className='login_card-tituloDetalle'>Nuestra torta no es una mentira</span></h2>
+        </div>
+        <Footer/>
+      </section>
+      <FlechaBack direccion={"/foopGames"}/>
     </div>
   )
 }

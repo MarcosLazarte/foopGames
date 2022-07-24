@@ -20,16 +20,14 @@ const Footer = () => {
         <div className='footer_trianguloDiv'><div className='footer_triangulo'></div></div>
         <div className='footer_bar'></div>
         <ul className='footer_contacto'>
-            <li><link rel="stylesheet" href="" />Aky</li>
-            <li><link rel="stylesheet" href="" />linkedin</li>
-            <li><link rel="stylesheet" href="" />github</li>
-            <p>©{anio}</p>
-            <p>Agradecimientos</p>
-
+            <li><a href="https://marcoslazarte.github.io/portafolioA2/">Aky </a></li>
+            <li><a href="https://www.linkedin.com/in/lazarte-aky/">linkedin </a></li>
+            <li><a href="https://github.com/MarcosLazarte">github</a></li>
         </ul>
-        <div>
-            <p></p>
-        </div>
+      <div className='footer_contecto-abajo'>
+        <p>©{anio}</p>
+        <p>Agradecimientos</p>
+      </div>
     </div>
   )
 }

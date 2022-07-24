@@ -29,5 +29,11 @@
     text-align: center;
     color: black;
     font-weight: 100;
-
+    position: relative;
+}
+.footer_contecto-abajo{
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }

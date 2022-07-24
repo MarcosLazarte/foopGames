@@ -85,12 +85,28 @@
     .nav_logos{
         background-color: #71E5B8;
         display: grid;
+        width: 100%;
+        align-items: center;
         grid-template-columns: auto auto;
+    }
+    .nav_botones{
+        margin-right: 3vw;
+        text-align: right;
+    }
+    .nav_boton{
+        font-size: 7vw;
+        margin-left: 3vw;
+        background: none;
     }
     .nav_barra-setItems{
         background-color: #260B40;
         display: grid;
         grid-template-columns: 25% 25% 25%;
+    }
+    .nav_titulo{
+        font-family: sans-serif;
+        font-size: 5vw;
+        margin-left: 3vw;
     }
     .cardSet{
         white-space: nowrap;
