@@ -1,20 +1,20 @@
 .footer{
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: 75vh;
     background-color: #D6CECA;
 }
 .footer_triangulo{
     background-image: linear-gradient(to right bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 50%, transparent 50%);
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 90%;
     top: 0;
     left: 0;
 }
 .footer_trianguloDiv{
     width: 100%;
-    height: 65vw;
+    height: 55vw;
     position: relative;
 }
 .footer_bar{
@@ -25,15 +25,44 @@
     background: linear-gradient(to right,black, white);
 }
 .footer_contacto{
-    font-family: sans-serif;
+    font-family: serif;
     text-align: center;
     color: black;
     font-weight: 100;
     position: relative;
+    font-size: 5vw;
 }
-.footer_contecto-abajo{
+.footer_contacto-abajo{
     position: absolute;
     bottom: 0;
     display: grid;
+    width: 100%;
     grid-template-columns: 50% 50%;
+    margin-bottom: 3vw;
+}
+.footer_contacto-linksTitulo{
+    font-size: 6vw;
+    font-style: italic;
+    margin-bottom: 6vw;
+}
+.footer_contacto-links{
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    color: #000;
+    text-decoration: none;
+    transition: color .5s;
+}
+.footer_contacto-links:hover{
+    color: #71E5B8;
+}
+.footer_contacto-abajoIzq{
+    width: 100%;
+    margin-left: 3vw;
+    color: #000;
+}
+.footer_contacto-abajoDer{
+    text-align: right;
+    margin-right: 3vw;
+    font-size: 4vw;
+    color: #000
 }

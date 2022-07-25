@@ -131,8 +131,8 @@ let fechaMejor = date1.toLocaleDateString("af-ZA", options);
         <section className='nav_logos'>
           <h1 className='nav_titulo'>foopGames</h1>
           <section className='nav_botones'>
-            <button className='nav_boton'>⚲</button>
-            <button className='nav_boton'>⚇</button>
+            <button className='nav_boton'>?</button>
+           <Link to={"/test"}><button className='nav_boton'>@</button></Link>
           </section>
         </section>
         <ul className='nav_barra-setItems'>
