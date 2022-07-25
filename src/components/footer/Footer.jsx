@@ -20,9 +20,9 @@ const Footer = () => {
       <div className='footer_trianguloDiv'><div className='footer_triangulo'></div></div>
       <ul className='footer_contacto'>
         <li className='footer_contacto-linksTitulo'>Charlemos!</li>
-        <a href="https://marcoslazarte.github.io/portafolioA2/"><li className='footer_contacto-links'>Aky </li></a>
-        <a href="https://www.linkedin.com/in/lazarte-aky/"><li className='footer_contacto-links'>linkedin </li></a>
-        <a href="https://github.com/MarcosLazarte"><li className='footer_contacto-links'>github</li></a>
+        <li className='footer_contacto-links'><a className='footer_contacto-a' href="https://marcoslazarte.github.io/portafolioA2/">Aky</a></li>
+        <li className='footer_contacto-links'><a className='footer_contacto-a' href="https://www.linkedin.com/in/lazarte-aky/">linkedin</a></li>
+        <li className='footer_contacto-links'><a className='footer_contacto-a' href="https://github.com/MarcosLazarte">github</a></li>
       </ul>
       <div className='footer_contacto-abajo'>
         <p className='footer_contacto-abajoIzq'>©{anio}</p>
