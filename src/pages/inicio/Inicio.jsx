@@ -14,12 +14,13 @@ const Inicio = () => {
   const [fecha, setFecha] = useState(new Date());
   const [listaNovedades, setListaNovedades] = useState(false)
   const [lista, setLista] = useState([]);
-  const [listaInicio, setListaInicio] = useState([]);
+  const [listaInicio, setListaInicio] = useState([{name: "cargando", short_screenshots: "cargando", slug: "cargando"},{name: "cargando", short_screenshots: "cargando", slug: "cargando"},{name: "cargando", short_screenshots: "cargando", slug: "cargando"},{name: "cargando", short_screenshots: "cargando", slug: "cargando"},{name: "cargando", short_screenshots: "cargando", slug: "cargando"},{name: "cargando", short_screenshots: "cargando", slug: "cargando"},{name: "cargando", short_screenshots: "cargando", slug: "cargando"},{name: "cargando", short_screenshots: "cargando", slug: "cargando"},{name: "cargando", short_screenshots: "cargando", slug: "cargando"},{name: "cargando", short_screenshots: "cargando", slug: "cargando"}]);
   const [slide, setSlide] = useState(0);
   const [direccion, setDireccion] = useState(true);
   const [loading, setLoading] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
+  const [loadedLista, setLoadedLista] = useState("")
   const key = 'ac4078b5e6ae4e6ba2a4cf37bc6cf96a';
 
   useEffect(() => {
@@ -96,6 +97,16 @@ let fechaMejor = date1.toLocaleDateString("af-ZA", options);
     }
   },[listaNovedades]);
 
+  useEffect( () => {
+    if(listaInicio){
+      setLoadedLista("cargue")
+    }
+  },[listaInicio]);
+
+  function pasarPagina(){
+    setPagina(pagina + 1);
+    setLoadedLista("")
+  }
   const moverDer = () => {
     if (direccion) {
       switch (slide) {
@@ -169,15 +180,21 @@ let fechaMejor = date1.toLocaleDateString("af-ZA", options);
             { loaded ? <img className='imagenes' src={listaNovedades.results[1].background_image} alt="asdf" /> : <h3>...cargando</h3> }
             { loaded ? <img className='imagenes' src={listaNovedades.results[2].background_image} alt="asdf" /> : <h3>...cargando</h3> }
           </div>
-
+          <div className='separacion'></div>
           <div className='divLista'>
             {
-              listaInicio.map( e => <Link to={'/games/'+e.slug}><ListaCards key={listaInicio.id} {...e}/></Link>)
+              listaInicio.map( e => <Link to={'/games/'+e.slug}><ListaCards key={listaInicio.id} value1={e} value2={loadedLista}/></Link>)
+            }
+            {
+              loadedLista ? <h1>cargue</h1> : <h1>no cargue</h1>
             }
           </div>
         </section>
-        <button onClick={ () => setPagina(pagina - 1)}>ATRAS</button>
-        <button onClick={ () => setPagina(pagina + 1)}>SIGUIENTE</button>
+        <div className='inicio_setNavPaginas'>
+          <button className='inicio_navPaginaIzq' onClick={ () => setPagina(pagina - 1)}>◄</button>
+          <button className='inicio_navPagina'>{pagina}</button>
+          <button className='inicio_navPaginaDer' onClick={ pasarPagina}>►</button>
+        </div>
       </main>
       
       <Footer/>

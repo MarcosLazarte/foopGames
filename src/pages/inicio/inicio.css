@@ -212,6 +212,15 @@
         background-color: #71E5B8;
         grid-template-columns: 90% 90% 90%;
         overflow-x: scroll;
+        margin-bottom: 5vw;
+    }
+    .separacion{
+        margin-left: auto;
+        margin-right: auto;
+        height: 0.5vw;
+        width: 90%;
+        background-color: aliceblue;
+        margin-bottom: 5vw;
     }
     .imagenes{
         float: inline-end;
@@ -248,5 +257,50 @@
         position: absolute;
         right: 0;
         top: 40%;
+    }
+    .inicio_setNavPaginas{
+        position: relative;
+        height: 15vw;
+    }
+    .inicio_navPaginaIzq{
+        width: 13vw;
+        height: 13vw;
+        border-radius: 50%;
+        position: absolute;
+        left: 3vw;
+        cursor: pointer;
+        transition: background-color 0.5s;
+        transition: transform 0.3s;
+    }
+    .inicio_navPaginaIzq:hover{
+        background-color: #260B40;
+        transform: scale(1.1);
+    }
+    .inicio_navPaginaDer{
+        width: 13vw;
+        height: 13vw;
+        border-radius: 50%;
+        position: absolute;
+        right: 3vw;
+        cursor: pointer;
+        transition: background-color 0.5s;
+        transition: transform 0.3s;
+    }
+    .inicio_navPaginaDer:hover{
+        background-color: #260B40;
+        transform: scale(1.1);
+    }
+    .inicio_navPagina{
+        position: absolute;
+        width: 13vw;
+        height: 13vw;
+        border-radius: 50%;
+        background-color: #71E5B8;
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 7vw;
+        margin: 0 auto 0 auto;
+        left: 0;
+        right: 0;
     }
 }
