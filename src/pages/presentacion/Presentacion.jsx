@@ -139,32 +139,34 @@ const Presentacion = () => {
     <div>
 
       <section className='primeraPagina'>
-        <div>
+        <div className='primeraPagina_container'>
           <div className='primerPagina_titulo'>
             <div className='primeraPagina_titulo-letras'>
               <h1 className='primeraPagina_titulo-letras1Fila'><span className='primeraPagina_titulo-letraImp'>F</span>oop</h1>
-              <h1 className='primeraPagina_titulo-letras2Fila'>fo<span className='primeraPagina_titulo-letraImp'>O</span>p</h1>
-              <h1 className='primeraPagina_titulo-letras3Fila'>f<span className='primeraPagina_titulo-letraImp'>O</span>op</h1>
+              <h1 className='primeraPagina_titulo-letras2Fila'>f<span className='segundaPagina_titulo-letraImp2'>o</span><span className='primeraPagina_titulo-letraImp ver2'>O</span>p</h1>
+              <h1 className='primeraPagina_titulo-letras3Fila'>f<span className='ver2 primeraPagina_titulo-letraImp '>O</span><span className='segundaPagina_titulo-letraImp2'>o</span>p</h1>
               <h1 className='primeraPagina_titulo-letras4Fila'>foo<span className='primeraPagina_titulo-letraImp'>P</span></h1>
             </div>
             <div className='linea'></div>
             <h1 className='primeraPagina_subTitulo'>games</h1>
           </div>
         </div>
-        <div className='cabeza'>
-          <div className='cabeza_arriba'></div>
-          <div className='cabeza_centro'></div>
-          <div className='cuernoDerecho-A'></div>
-          <div className='cuernoDerecho-B'></div>
-          <div className='cuernoIzquierdo-A'></div>
-          <div className='cuernoIzquierdo-B'></div>
-          <div className='ojos'>
-            <div className='ojo_izq'></div>
-            <div className='ojo_sombrasIzq'></div>
-            <div className='ojo_der'></div>
-            <div className='ojo_sombrasDer'></div>
+        <div className='container_cabeza'>
+          <div className='cabeza'>
+            <div className='cabeza_arriba'></div>
+            <div className='cabeza_centro'></div>
+            <div className='cuernoDerecho-A'></div>
+            <div className='cuernoDerecho-B'></div>
+            <div className='cuernoIzquierdo-A'></div>
+            <div className='cuernoIzquierdo-B'></div>
+            <div className='ojos'>
+              <div className='ojo_izq'></div>
+              <div className='ojo_sombrasIzq'></div>
+              <div className='ojo_der'></div>
+              <div className='ojo_sombrasDer'></div>
+            </div>
+            <div className='segundaPagina_lineaHollow'></div>
           </div>
-          <div className='segundaPagina_lineaHollow'></div>
         </div>
       </section>
 
