@@ -1,11 +1,8 @@
-import { toHaveFormValues } from '@testing-library/jest-dom/dist/matchers';
 import React, { useEffect, useState, useContext, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Footer from '../../components/footer/Footer';
 import IndividualDisplayContext from '../../context/individualDisplayContext';
 import './gamePerfil.css';
-import { auth, store, doc, setDoc } from '../../firebaseconfig';
-import { collection, getDoc, getFirestore } from 'firebase/firestore';
 
 const GamePerfil = () => {
   const {juegoIndividual, setJuegoIndividual} = useContext(IndividualDisplayContext);
@@ -16,19 +13,7 @@ const GamePerfil = () => {
   const [dev, setDev] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loaded, setLoaded] = useState(false);
-  const [usuarioUID, setUsuarioUID] = useState(0);
-  
-/*
-function hola(){
-    console.log("comeme la wea")
-    let testo = document.getElementById('test')
-    let texton = "<h1>TEXTO</h1><p>Como andas? <br> Todobien </p>"
-	var parser = new DOMParser();
-	var doc = parser.parseFromString(texton, 'text/html');
-    test.innerHTML = doc.firstChild.innerHTML
-    console.log(doc.firstChild.innerHTML);
-    console.log(doc.firstChild.firstChild.innerHTML);
-}*/
+
 /*
   const llamar = () => {
     fetch(`https://api.rawg.io/api/games/${games}?key=${key}`)
@@ -46,12 +31,6 @@ function hola(){
         setDatos(data);
       });
   },[]);
-
-    const convertStringToHMTL = (stringo) => {
-    let parser = new DOMParser();
-    let doc = parser.parseFromString(stringo, 'text/html');
-    return doc.body.firstChild.textContent;
-  }
 */
   const fetchData = async () => {
     setLoading(true);
@@ -68,61 +47,24 @@ function hola(){
   },[]);
 
   useEffect( () => {
-    if(datos){
-      setLoaded(true)
-      //test
-      let descripcion = document.getElementById("gPerfil_test2");
-      descripcion.innerHTML = datos.description
-      //test
-    } 
+    if(datos) setLoaded(true)
   },[datos]);
 
-  useEffect( () => {
-		function getUser(){
-			auth.onAuthStateChanged( (user) => {
-				if(user){
-					//setUsuario(user.email);
-					setUsuarioUID(user.uid);
-					//return user.uid
-				}
-			});
-		}
-		getUser();
-	}, []);
-
-  const guardarJuego = async () => {
-    console.log(usuarioUID)
-    try{
-      let dato = {
-        juego : datos.slug
-      }
-      const db = getFirestore();
-      const colRef = collection(db, "users")
-      const docRef = doc(db, 'users', usuarioUID)
-      const docSnap = await getDoc(docRef)
-
-      if(docSnap.exists()){
-        console.log("document data: ", docSnap.data().terminados)
-        let arrayo = docSnap.data().terminados
-        arrayo.push(datos.slug)
-        const datosJuegos = doc(db, 'users', usuarioUID);
-        setDoc(datosJuegos, { terminados: arrayo}, { merge: true});
-      }
-      //const { docs } = await store.collection('users').doc(usuarioUID).get("terminados")
-      //console.log(docs)
-      //const newArray = docs.map( item => ({id: item.id, ...item.data()}))
-      //console.log(newArray)
-      //await store.collection('agenda').doc(usuarioUID).set(dato)
-      //const { docs } = await store.collection('agenda').get()
-      //const newArray = docs.map( item => ({id: item.id, ...item.data()}))
-      //setAgenda(newArray)
-      //console.log('ID: ', data.id)
-      alert("Se agrego correctamente")
-    }catch(error){
-        console.log(error)
-    }
+  const convertStringToHMTL = (stringo) => {/*
+    let parser = new DOMParser();
+    console.log(stringo)
+    let doc = parser.parseFromString(stringo, 'text/html');
+    return doc.body.innerHTML;
+  /*
+      let tmp = document.createElement("DIV");
+      tmp.innerHTML = stringo;
+      return tmp.textContent || tmp.innerText || "";
+   */
+  let arrayo = "<p>holis</p><br><p>chau</p>";
+  let dom = document.createElement('div');
+  dom.innerHTML = arrayo;
+   return dom.innerHTMLx
   }
-
   const fondoTest = () => {
     const fondo = {
       backgroundImage: `url(${datos.background_image})`,
@@ -168,7 +110,7 @@ function hola(){
             </div>
 
             <div className='HUD_Down'>
-              <button className='HUD_terminado' onClick={guardarJuego}>Terminado?</button>
+              <button className='HUD_terminado'>Terminado?</button>
             </div>
             
           </div>
@@ -177,11 +119,11 @@ function hola(){
 
       <section className='gamePerfil_paginaDos'>
         <article className='gamePerfil_paginaDos-article'>
-          <div id='gPerfil_test2' className='gPerfil_test2'>
-
-          </div>
-          {loaded ? /*(datos.description).replace(/<p>|<\/p>/g, '')*//*<div>{convertStringToHMTL(datos.description)}</div>*/<div id='gPerfil_test'></div> : <h3>...cargando</h3>}
+          {loaded ? /*(datos.description).replace(/<p>|<\/p>/g, '')*/<div className='gamePerfil_textoDescriptivo'>{convertStringToHMTL(datos.description)}</div> : <h3>...cargando</h3>}
         </article>
+        <h2>nuevo</h2>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus voluptatem quia laudantium reprehenderit expedita. Ad deleniti, asperiores minima possimus voluptatem eaque culpa natus est sapiente adipisci voluptate iure nesciunt amet.
+        { loaded ? <video src={datos.background_image}>Video</video> : <h3>,,,cargando</h3>}
       </section>
       <Footer/>
       <nav className='gamePerfil_nav'>

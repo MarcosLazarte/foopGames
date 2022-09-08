@@ -777,11 +777,13 @@
     }
     .segundaPagina{
         background: linear-gradient(#151737,black);
-        width: 100%;
+        width: 91%;
+        margin-left: 9%;
         height: 100vh;
     }
     .terceraPagina{
-        width: 100%;
+        width: 91%;
+        margin-left: 9%;
         height: 100vh;
     }
     .primeraPagina_titulo-letraImp{
@@ -834,19 +836,14 @@
         right: 7vw;
         font-style: italic;
     }
-    
-
-
-
-
     .segundaPagina_titulo{
         overflow: hidden;
-        width: 100%;
+        width: 91%;
         padding-top: 15vw;
-        font-size: 10vw;
-        line-height: 13vw;
+        font-size: 6vw;
+        line-height: 6vw;
         text-transform: uppercase;
-        text-align: center;
+        text-align: left;
     }
     .segundaPagina_Subtitulo{
         overflow: hidden;
@@ -874,14 +871,15 @@
     .segundaPagina_parrafo{
         margin-top: 10vw;
         text-align: center;
-        line-height: calc(17px + 2vw);
-        margin-right: 3vw;
-        margin-left: 3vw;
+        line-height: calc(17px + 1vw);
+        margin-right: 3%;
+        margin-left: 3%;
+        font-size: 1.5vw;
     }
     .segundaPagina_imagenesSet{
         margin-top: 5vw;
-        margin-left: 9vw;
-        width: 95%;
+        margin-left: 9%;
+        width: 91%;
     }
     .setImagenes{
         margin-top: 5vw;
@@ -924,16 +922,16 @@
         margin-right: 5vw;
         margin-left: 5vw;
         text-align: center;
-        font-size: 4vw;
+        font-size: 2vw;
         margin-top: 10vw;
-        line-height: 7vw;
+        line-height: 3vw;
         font-style: italic;
         display: flex;
         align-items: center;
     }
     .segundaPagina_nailSet{
         position: relative;
-        height: calc(24vw + 380px);
+        height: calc(14vw + 300px);
     }
     .segundaPagina_mango{
         background-color: #B5ABB5;
@@ -1124,11 +1122,57 @@
         animation-duration: 1s;
         animation-fill-mode: forwards;
     }
-
-
-
-
-
+    
+    .cuartaPagina{
+        width: 91%;
+        margin-left: 9%;
+    }
+    .cuartaPagina_card{
+        background-color: #0B535C;
+        width: 100%;
+        height: 30vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cuartaPagina_card2{
+        width: 100%;
+        height: 30vw;
+        text-align: center;
+        font-size: 8vw;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cuartaPagina_card-titulo{
+        font-size: 10vw;
+        text-transform: uppercase;
+        text-align: right;
+        color: whitesmoke;
+        z-index: 1;
+        padding-top: 7vw;
+    }
+    .cuartaPagina_card-parrafo{
+        font-size: 4vw;
+        margin-top: 10vw;
+        padding-bottom: 7vw;
+        text-align: center;
+        margin-right: 3vw;
+        margin-left: 3vw;
+    }
+    .quintaPagina{
+        background-color: #D6CECA;
+        height: 100vh;
+        width: 91%;
+        margin-left: 9%;
+    }
+    .quintaPagina_detalle-dibujo{
+        background-color: #D6CECA;
+        border-left: 95vw solid black;
+        border-bottom: 30vw solid transparent;
+    }
 }
 @media screen and (min-width: 1500px){
     .container_cabeza{

@@ -250,8 +250,7 @@ const Presentacion = () => {
           <p className='cuartaPagina_card-parrafo'>“What is a man? A miserable little pile of secrets!"</p>
         </div>
       </section>
-
-      <Footer/>
+        <Footer/>
       <footer>
         {time}
       </footer>
