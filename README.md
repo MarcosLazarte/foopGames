@@ -14,7 +14,7 @@ HTML5, CSS3, ReactJS, Fireauth, Firebase, Rawg API
 - Fork/clone/download the repo and run: ***npm install*** inside the folder.
 - Then, run ***npm start***.
 
-##Contact
+## Contact
 <br>
 https://www.linkedin.com/in/lazarte-aky/
 marcos.e.lazarte@gmail.com
