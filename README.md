@@ -15,7 +15,6 @@ HTML5, CSS3, ReactJS, Fireauth, Firebase, Rawg API
 - Then, run ***npm start***.
 
 ## Contact
-<br>
 https://www.linkedin.com/in/lazarte-aky/
 marcos.e.lazarte@gmail.com
 
